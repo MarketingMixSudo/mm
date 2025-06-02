@@ -7,10 +7,9 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-
 @theme inline {
-    --font-heading: "Open Sans", "sans-serif"; 
-    --font-text: "Poppins", 'sans-serif';
+    --font-heading: "Open Sans", "sans-serif";
+    --font-text: "Poppins", "sans-serif";
 
     --breakpoint-xxs: 350px;
     --breakpoint-xs: 390px;
@@ -35,10 +34,8 @@
     }
 }
 
-
-
 .outlined-text {
-  color: transparent; /* przezroczysty środek */
-  -webkit-text-stroke: 1px #b31c83; /* biały kontur */
-  text-stroke: 1px #b31c83; /* dla przeglądarek wspierających */
+    color: transparent; /* przezroczysty środek */
+    -webkit-text-stroke: 1px #b31c83; /* biały kontur */
+    text-stroke: 1px #b31c83; /* dla przeglądarek wspierających */
 }
