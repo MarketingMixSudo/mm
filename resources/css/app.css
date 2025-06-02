@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+
+
+@theme inline {
+    --font-heading: "Open Sans", "sans-serif"; 
+    --font-text: "Poppins", 'sans-serif';
+
+    --breakpoint-xxs: 350px;
+    --breakpoint-xs: 390px;
+    --breakpoint-max: 2200px;
+
+    --color-primary-400: #b31c83;
+    --color-primary-600: #9b146e;
+
+    --color-background-dark-400: #181818;
+    --color-background-dark-800: #000000;
+
+    --color-font-light: #ffffff;
+    --color-font-dark: #000000;
+}
+
+@layer base {
+    html {
+        @apply scroll-smooth scroll-p-10 antialiased;
+    }
+    body {
+        @apply bg-background-dark-400 font-text font-light text-font-light overflow-x-hidden;
+    }
+}
