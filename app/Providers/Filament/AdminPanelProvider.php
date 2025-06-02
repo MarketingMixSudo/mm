@@ -34,7 +34,7 @@ class AdminPanelProvider extends PanelProvider
             ->favicon('/favicon/favicon.ico')
             ->brandLogo('/assets/logo.png')
             ->darkModeBrandLogo('/assets/logo.png')
-            ->brandLogoHeight(fn() => auth()->check() ? '40px' : '40px')
+            ->brandLogoHeight(fn() => auth()->check() ? '30px' : '40px')
             ->colors([
                 'primary' => Color::hex('#b31c83'),
                 'gray' => Color::Slate,
@@ -42,7 +42,7 @@ class AdminPanelProvider extends PanelProvider
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')
             ->pages([
-                Pages\Dashboard::class,
+                
             ])
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets')
             ->widgets([

@@ -1,0 +1,7 @@
+created:
+    - database/factories/PostFactory.php
+    - database/migrations/2025_06_02_054755_create_posts_table.php
+    - app/Models/Post.php
+models:
+    User: { name: string, email: string, email_verified_at: 'datetime nullable', password: string, remember_token: 'string nullable' }
+    Post: { meta_title: 'text nullable', meta_description: 'text nullable', title: 'text unique', slug: 'text unique', thumbnail: text, content: text, published_at: datetime }

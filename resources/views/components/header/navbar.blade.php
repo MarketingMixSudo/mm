@@ -1,4 +1,4 @@
-<div class="bg-bgDark-800 w-full text-white flex flex-col  ">
+<div class="bg-bgDark-800 w-full  flex flex-col  ">
 
 
     <div class="flex  justify-between items-center max-w-screen-max px-12 mx-auto py-4 w-full ">
@@ -7,26 +7,29 @@
 
             <div class="justify-center items-center gap-8 hidden sm:flex  ">
 
-                <a href="tel:" class="flex justify-center items-center gap-2 text-xs group"
-                    aria-label="{{__('global.aria.phone')}}">
-                    <x-lucide-phone class="size-5 stroke-1 text-white" /> <span
-                        class="link-hover--group after:!bg-white !hidden 2xl:!block">123 456 789</span>
+                <a href="tel:" class="flex justify-center items-center gap-2 text-xs group hover:text-primary-400 duration-300"
+                    aria-label="telefon">
+                    <x-lucide-phone class="size-4  " /> <span
+                        class=" after:!bg-white !hidden 2xl:!block">123 456 789</span>
                 </a>
 
-                <a href="mailto:" class="flex justify-center items-center gap-2 text-xs group"
-                    aria-label="{{__('global.aria.email')}}">
-                    <x-lucide-mail class="size-5 stroke-1 text-white" /> <span
-                        class="link-hover--group after:!bg-white !hidden 2xl:!block">test@test.pl</span>
+                <a href="mailto:" class="flex justify-center items-center gap-2 text-xs group hover:text-primary-400 duration-300"
+                    aria-label="email">
+                    <x-lucide-mail class="size-4  " /> <span
+                        class=" after:!bg-white !hidden 2xl:!block">test@test.pl</span>
                 </a>
 
-                <a href="" class="flex justify-center items-center gap-2 text-xs group"
-                    aria-label="{{__('global.aria.address')}}">
-                    <x-lucide-map-pin class="size-5 stroke-1 text-white" /> <span
-                        class="link-hover--group after:!bg-white !hidden 2xl:!block langu">12 Test, 34-400 Test</span>
+                <a href="" class="flex justify-center items-center gap-2 text-xs group hover:text-primary-400 duration-300"
+                    aria-label="adres">
+                    <x-lucide-map-pin class="size-4 " /> <span
+                        class=" after:!bg-white !hidden 2xl:!block text-xs">12 Test, 34-400 Test</span>
                 </a>
 
             </div>
-            <p>sociale</p>
+            <div class="flex justify-center items-center gap-6">
+                <x-socials/>
+                <x-header.theme-toggler />
+            </div>
         </div>
     </div>
 
@@ -61,5 +64,8 @@
             <x-header.nav-item href="#" label="Kontakt" />
         </ul>
     </nav>
+
+
+
 
 </div>

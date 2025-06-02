@@ -5,6 +5,7 @@
 @source '../**/*.blade.php';
 @source '../**/*.js';
 
+@custom-variant dark (&:where(.dark, .dark *));
 
 
 @theme inline {
@@ -30,6 +31,14 @@
         @apply scroll-smooth scroll-p-10 antialiased;
     }
     body {
-        @apply bg-background-dark-400 font-text font-light text-font-light overflow-x-hidden;
+        @apply bg-white dark:bg-background-dark-400 font-text font-light text-font-dark dark:text-font-light overflow-x-hidden;
     }
+}
+
+
+
+.outlined-text {
+  color: transparent; /* przezroczysty środek */
+  -webkit-text-stroke: 1px #b31c83; /* biały kontur */
+  text-stroke: 1px #b31c83; /* dla przeglądarek wspierających */
 }
