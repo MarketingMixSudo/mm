@@ -13,6 +13,7 @@
 
     --breakpoint-xxs: 350px;
     --breakpoint-xs: 390px;
+    --breakpoint-3xl: 1800px;
     --breakpoint-max: 2200px;
 
     --color-primary-400: #b31c83;
@@ -20,6 +21,9 @@
 
     --color-background-dark-400: #181818;
     --color-background-dark-800: #000000;
+
+    --color-background-light-400: #fff;
+  
 
     --color-font-light: #ffffff;
     --color-font-dark: #000000;

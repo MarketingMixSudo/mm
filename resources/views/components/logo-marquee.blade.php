@@ -1,5 +1,5 @@
 
-<div class="bg-black py-6">
+<div class="bg-background-dark-400 py-6">
 
     <div id="logo-marquee--js" class="overflow-x-hidden max-w-screen-2xl mx-auto">
         <div class="flex flex-wrap justify-center items-center gap-12  ">
