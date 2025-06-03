@@ -1,68 +1,56 @@
 <div class="bg-bgDark-800 w-full  flex flex-col  ">
 
 
-    <div class="flex  justify-between items-center max-w-screen-max px-12 mx-auto py-4 w-full ">
-
-        <div class="flex justify-between items-center w-full  ">
-
-            <div class="justify-center items-center gap-8 hidden sm:flex  ">
-
-                <a href="tel:" class="flex justify-center items-center gap-2 text-xs group hover:text-primary-400 duration-300"
-                    aria-label="telefon">
-                    <x-lucide-phone class="size-4  " /> <span
-                        class=" after:!bg-white !hidden 2xl:!block">123 456 789</span>
-                </a>
-
-                <a href="mailto:" class="flex justify-center items-center gap-2 text-xs group hover:text-primary-400 duration-300"
-                    aria-label="email">
-                    <x-lucide-mail class="size-4  " /> <span
-                        class=" after:!bg-white !hidden 2xl:!block">test@test.pl</span>
-                </a>
-
-                <a href="" class="flex justify-center items-center gap-2 text-xs group hover:text-primary-400 duration-300"
-                    aria-label="adres">
-                    <x-lucide-map-pin class="size-4 " /> <span
-                        class=" after:!bg-white !hidden 2xl:!block text-xs">12 Test, 34-400 Test</span>
-                </a>
-
-            </div>
-            <div class="flex justify-center items-center gap-6">
-                <x-socials/>
-                <x-header.theme-toggler />
-            </div>
-        </div>
-    </div>
+    <x-header.topbar />
 
 
-    <nav class=" w-full  flex justify-between items-center max-w-screen-2xl mx-auto  pb-6">
+    <nav class=" w-full  flex justify-between items-center max-w-screen-2xl mx-auto  pb-6 px-2 sm:px-6 2xl:px-0">
 
-        <a href="{{ route('home') }}"><img src="{{asset('assets/logo.png')}}" alt="marketingmix"></a>
+        <a href="{{ route('home') }}" aria-label="Strona główna"><img src="{{asset('assets/logo.png')}}"
+                alt="Agencja Reklamowa MarketingMix" class="w-[200px] sm:w-auto"></a>
 
 
-        <ul class="flex gap-6">
-            <x-header.nav-item href="#" label="O nas" />
+        <ul class="hidden xl:flex gap-6">
+            <x-header.nav-item href="{{route('about.index')}}" activeRoute="about.index" label="O nas" />
 
             <x-header.nav-dropdown title="Projektowanie" route="#">
 
 
-                <x-header.nav-dropdown-item href="#">Element 1
+                <x-header.nav-dropdown-item href="#">Projektowanie i tworzenie logotypów
                 </x-header.nav-dropdown-item>
-                <x-header.nav-dropdown-item href="#">Element 2
+                <x-header.nav-dropdown-item href="#">Projektowanie i tworzenie wizytówek firmowych
                 </x-header.nav-dropdown-item>
-                <x-header.nav-dropdown-item href="#">Element 3
+                <x-header.nav-dropdown-item href="#">Projektowanie papieru firmowego
+                </x-header.nav-dropdown-item>
+                <x-header.nav-dropdown-item href="#">Projektowanie plakatów i ulotek
                 </x-header.nav-dropdown-item>
 
 
             </x-header.nav-dropdown>
 
 
-            <x-header.nav-item href="#" label="WWW" />
+           <x-header.nav-dropdown title="WWW" route="#">
+
+
+                <x-header.nav-dropdown-item href="#">Profesjonalne tworzenie stron internetowych
+                </x-header.nav-dropdown-item>
+                <x-header.nav-dropdown-item href="#">Projektowanie i tworzenie sklepów internetowych
+                </x-header.nav-dropdown-item>
+                <x-header.nav-dropdown-item href="#">Realizacje
+                </x-header.nav-dropdown-item>
+
+            </x-header.nav-dropdown>
+
+
             <x-header.nav-item href="#" label="Kampanie" />
             <x-header.nav-item href="#" label="Treści" />
             <x-header.nav-item href="#" label="Foto / Video" />
             <x-header.nav-item href="#" label="Druki firmowe" />
             <x-header.nav-item href="#" label="Kontakt" />
         </ul>
+
+
+        <x-header.hamburger class="xl:hidden"/>
     </nav>
 
 

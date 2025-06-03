@@ -1,9 +1,9 @@
 import marquee from "vanilla-marquee";
 
-const logoMarqueeEl = document.getElementById('logo-marquee--js');
+const marqueeEl = document.getElementById('text-marquee--js');
 
-if (logoMarqueeEl) {
-    new marquee(logoMarqueeEl, {
+if (marqueeEl) {
+    new marquee(marqueeEl, {
         duplicated: true,
         speed: 80,
         pauseOnHover: true

@@ -1,4 +1,10 @@
 import './bootstrap';
 
 import './logo-marquee'
+import './text-marquee'
 import './theme-toggler'
+import './posts-swiper'
+import './testimonials-swiper'
+import './projects-swiper'
+import './scroll-to-top'
+import './mobileMenu'

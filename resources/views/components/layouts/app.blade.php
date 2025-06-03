@@ -25,8 +25,8 @@
     <header>
         
         <x-header.navbar />
-        {{-- <x-header.navbar-scroll />
-        <x-header.menu /> --}}
+        {{-- <x-header.navbar-scroll />--}}
+        <x-header.menu /> 
     </header>
 
 
@@ -34,6 +34,7 @@
         {{ $slot }}
     </main>
 
+    <x-scroll-to-top/>
     <x-footer />
 
 </body>
