@@ -1,4 +1,4 @@
-<section class="relative py-32">
+<section class="relative py-32 -z-10 mt-12">
 
     {{-- BACKGROUND IMAGE --}}
     <img src="{{ asset('dummy/about_hero_bg.png') }}" alt="" class="inset-0 absolute w-full h-full object-cover object-center z-0">

@@ -14,7 +14,7 @@
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-  
+   <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css">
 </head>
 
 <body>
@@ -36,6 +36,10 @@
 
     <x-scroll-to-top/>
     <x-footer />
+
+
+   
+   
 
 </body>
 
