@@ -22,7 +22,7 @@
                 <x-header.nav-dropdown title="Projektowanie" route="{{route('projects.index')}}" activeRoute="projects.index">
 
 
-                    <x-header.nav-dropdown-item href="#">Projektowanie i tworzenie logotypów
+                    <x-header.nav-dropdown-item href="{{route('projects.logotypes')}}">Projektowanie i tworzenie logotypów
                     </x-header.nav-dropdown-item>
                     <x-header.nav-dropdown-item href="#">Projektowanie i tworzenie wizytówek firmowych
                     </x-header.nav-dropdown-item>

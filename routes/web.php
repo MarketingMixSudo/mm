@@ -9,7 +9,9 @@ use App\Http\Controllers\ProjectsController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/o-nas', [AboutController::class, 'index'])->name('about.index');
+
 Route::get('/projektowanie', [ProjectsController::class, 'index'])->name('projects.index');
+Route::get('/projektowanie-i-tworzenie-logotypow', [ProjectsController::class, 'logotypes'])->name('projects.logotypes');
 
 Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
 Route::get('/blog/artykul', [BlogController::class, 'show'])->name('blog.show');
