@@ -42,7 +42,7 @@
                     </x-header.nav-dropdown-item>
                     <x-header.nav-dropdown-item href="{{route('www.ecommerce')}}">Projektowanie i tworzenie sklepów internetowych
                     </x-header.nav-dropdown-item>
-                    <x-header.nav-dropdown-item href="#">Realizacje
+                    <x-header.nav-dropdown-item href="{{route('www.realisations')}}">Realizacje
                     </x-header.nav-dropdown-item>
 
                 </x-header.nav-dropdown>
