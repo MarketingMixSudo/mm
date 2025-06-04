@@ -3,8 +3,8 @@
 
 <title>{!! $title !!}</title>
 <meta name="description" content="{!! $description !!}">
-
-{{-- <meta name="keywords" content="{{$home->keywords}}"> --}}
+<meta name="keywords"
+    content="MarketingMix, agencja reklamowa, Nowy Targ, projektowanie graficzne, projektowanie logo, strony internetowe, sklepy internetowe, branding, identyfikacja wizualna, reklama, reklama internetowa, tworzenie stron, projektowanie stron www, kampanie reklamowe, projekt ulotek, projekt wizytówek">
 
 
 <meta name="author" content="marketingmix.pl">
@@ -24,4 +24,5 @@
 <meta property="og:description" content="{!! $description !!}">
 <meta property="og:url" content="{{ url()->current() }}">
 <meta property="og:type" content="website">
-{{-- <meta property="og:image" content="{{ isset($ogImage) && $ogImage ? asset('storage/'.$ogImage) : asset('storage/'.$home->og_image) }}"> --}}
+
+<meta property="og:image" content="{{asset('opengraph_image.webp')}}">

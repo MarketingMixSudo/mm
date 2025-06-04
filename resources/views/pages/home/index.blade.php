@@ -1,5 +1,24 @@
 <x-layouts.app title="title" description="desc">
 
+    @slot('seo')
+
+    <script type="application/ld+json">
+        {
+  "@context": "https://schema.org/", 
+  "@type": "BreadcrumbList", 
+  "itemListElement": [{
+    "@type": "ListItem", 
+    "position": 1, 
+    "name": "Home",
+    "item": "https://marketingmix.pl"  
+  }]
+}
+    </script>
+
+    @endslot
+
+
+
     @include('pages.home.partials.hero')
 
     <x-logo-marquee />

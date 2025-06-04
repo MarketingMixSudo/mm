@@ -36,17 +36,19 @@
     body {
         @apply bg-white dark:bg-background-dark-400 font-text font-light text-font-dark dark:text-font-light overflow-x-hidden;
     }
+
+  
 }
 
 @layer utilities {
     .topbar__link {
-        @apply relative flex justify-center items-center gap-2 text-xs 
+        @apply relative flex justify-center items-center gap-2 text-xs;
     }
-    .topbar__link-icon{
+    .topbar__link-icon {
         @apply size-4 group-hover:text-primary-400 duration-300;
     }
-    .topbar__link-text{
-        @apply !hidden lg:!block
+    .topbar__link-text {
+        @apply !hidden lg:!block;
     }
 
     .link-hover {
@@ -57,9 +59,28 @@
             hover:after:scale-x-100;
     }
 
-      .nav__item--active {
+    .nav__item--active {
         @apply text-primary-400;
     }
+
+    .section {
+        @apply py-6 lg:py-12;
+    }
+    .wrapper{
+        @apply max-w-screen-xl mx-auto px-6 2xl:px-0
+    }
+
+
+    .prose__preheading{
+        @apply font-medium font-heading text-primary-400
+    }
+    .prose__heading{
+        @apply !mb-6 !mt-2 text-3xl font-heading !text-font-dark dark:!text-font-light
+    }
+    .prose__content{
+        @apply prose dark:prose-invert prose-a:no-underline text-font-dark dark:text-font-light prose-h2:text-primary-400 prose-h3:text-primary-400 prose-ul:ps-0 prose-ul:sm:ps-4
+    }
+
 }
 
 .outlined-text {

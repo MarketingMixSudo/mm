@@ -1,4 +1,4 @@
-@props(['title', 'description', 'noFollow' => false,'ogImage'=>null])
+@props(['title', 'description','seo'=>false])
 
 <!DOCTYPE html>
 
@@ -6,27 +6,30 @@
 
 <head>
 
-   
 
     @include('partials.meta')
     @include('partials.fonts')
     @include('partials.favicon')
+    @include('partials.seo')
+
+        {!! $seo ?? '' !!}
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-   <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css">
 </head>
 
 <body>
-  
 
-    {{-- <x-preloader /> --}}
+
+    {{--
+    <x-preloader /> --}}
 
     <header>
-        
+
         <x-header.navbar />
-        {{-- <x-header.navbar-scroll />--}}
-        <x-header.menu /> 
+        {{--
+        <x-header.navbar-scroll />--}}
+        <x-header.menu />
     </header>
 
 
@@ -34,12 +37,12 @@
         {{ $slot }}
     </main>
 
-    <x-scroll-to-top/>
+    <x-scroll-to-top />
     <x-footer />
 
 
-   
-   
+
+
 
 </body>
 

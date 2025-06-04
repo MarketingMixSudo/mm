@@ -52,8 +52,8 @@
                 <x-header.nav-item href="#" label="Treści" />
                 <x-header.nav-item href="#" label="Foto / Video" />
                 <x-header.nav-item href="#" label="Druki firmowe" />
-                <x-header.nav-item href="#" label="Kontakt" />
-                <x-header.nav-item href="#" label="Blog" />
+                <x-header.nav-item href="{{route('contact')}}" activeRoute="contact" label="Kontakt" />
+                <x-header.nav-item href="{{route('blog.index')}}" activeRoute="blog.index" label="Blog" />
             </ul>
 
 
