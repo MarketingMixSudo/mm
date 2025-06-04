@@ -9,4 +9,7 @@ class WwwController extends Controller
      public function index(){
         return view ('pages.www.index');
     }
+     public function websites(){
+        return view ('pages.www.websites');
+    }
 }

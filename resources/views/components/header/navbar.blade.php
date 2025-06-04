@@ -38,7 +38,7 @@
                 <x-header.nav-dropdown title="WWW" route="{{route('www.index')}}">
 
 
-                    <x-header.nav-dropdown-item href="#">Profesjonalne tworzenie stron internetowych
+                    <x-header.nav-dropdown-item href="{{route('www.websites')}}">Profesjonalne tworzenie stron internetowych
                     </x-header.nav-dropdown-item>
                     <x-header.nav-dropdown-item href="#">Projektowanie i tworzenie sklepów internetowych
                     </x-header.nav-dropdown-item>

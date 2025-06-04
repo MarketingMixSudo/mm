@@ -18,6 +18,7 @@ Route::get('/projektowanie-papieru-firmowego', [ProjectsController::class, 'lett
 Route::get('/projektowanie-plakatow-i-ulotek', [ProjectsController::class, 'posters'])->name('projects.posters');
 
 Route::get('/www', [WwwController::class, 'index'])->name('www.index');
+Route::get('/www/profesjonalne-tworzenie-stron-internetowych', [WwwController::class, 'websites'])->name('www.websites');
 
 Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
 Route::get('/blog/artykul', [BlogController::class, 'show'])->name('blog.show');

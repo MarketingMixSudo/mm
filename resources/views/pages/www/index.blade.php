@@ -131,7 +131,7 @@
 
          
 
-<x-heading-special preheading="Realizacje" heading="Portfolio tworzonych przez nas stron i sklepów internetowych"/>
+<x-heading-special heading="Realizacje" subheading="Portfolio tworzonych przez nas stron i sklepów internetowych"/>
 
             <div class=" w-full swiper  wwwwRealisationsCarousel--js ">
                 <div class="swiper-wrapper">
