@@ -16,4 +16,11 @@ class ProjectsController extends Controller
      public function businessCards(){
         return view ('pages.projects.business-cards');
     }
+
+     public function letterhead(){
+        return view ('pages.projects.letterhead');
+    }
+     public function posters(){
+        return view ('pages.projects.posters');
+    }
 }

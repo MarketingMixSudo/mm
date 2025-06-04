@@ -26,9 +26,9 @@
                     </x-header.nav-dropdown-item>
                     <x-header.nav-dropdown-item href="{{route('projects.businessCards')}}">Projektowanie i tworzenie wizytówek firmowych
                     </x-header.nav-dropdown-item>
-                    <x-header.nav-dropdown-item href="#">Projektowanie papieru firmowego
+                    <x-header.nav-dropdown-item href="{{route('projects.letterhead')}}">Projektowanie papieru firmowego
                     </x-header.nav-dropdown-item>
-                    <x-header.nav-dropdown-item href="#">Projektowanie plakatów i ulotek
+                    <x-header.nav-dropdown-item href="{{route('projects.posters')}}">Projektowanie plakatów i ulotek
                     </x-header.nav-dropdown-item>
 
 

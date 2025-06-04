@@ -13,6 +13,8 @@ Route::get('/o-nas', [AboutController::class, 'index'])->name('about.index');
 Route::get('/projektowanie', [ProjectsController::class, 'index'])->name('projects.index');
 Route::get('/projektowanie-i-tworzenie-logotypow', [ProjectsController::class, 'logotypes'])->name('projects.logotypes');
 Route::get('/projektowanie-i-tworzenie-wizytowek-firmowych', [ProjectsController::class, 'businessCards'])->name('projects.businessCards');
+Route::get('/projektowanie-papieru-firmowego', [ProjectsController::class, 'letterhead'])->name('projects.letterhead');
+Route::get('/projektowanie-plakatow-i-ulotek', [ProjectsController::class, 'posters'])->name('projects.posters');
 
 Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
 Route::get('/blog/artykul', [BlogController::class, 'show'])->name('blog.show');
