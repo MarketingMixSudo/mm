@@ -19,6 +19,7 @@ Route::get('/projektowanie-plakatow-i-ulotek', [ProjectsController::class, 'post
 
 Route::get('/www', [WwwController::class, 'index'])->name('www.index');
 Route::get('/www/profesjonalne-tworzenie-stron-internetowych', [WwwController::class, 'websites'])->name('www.websites');
+Route::get('/www/projektowanie-tworzenie-sklepow-internetowych', [WwwController::class, 'ecommerce'])->name('www.ecommerce');
 
 Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
 Route::get('/blog/artykul', [BlogController::class, 'show'])->name('blog.show');

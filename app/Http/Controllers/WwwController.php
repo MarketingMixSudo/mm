@@ -12,4 +12,7 @@ class WwwController extends Controller
      public function websites(){
         return view ('pages.www.websites');
     }
+     public function ecommerce(){
+        return view ('pages.www.ecommerce');
+    }
 }

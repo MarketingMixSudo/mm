@@ -40,7 +40,7 @@
 
                     <x-header.nav-dropdown-item href="{{route('www.websites')}}">Profesjonalne tworzenie stron internetowych
                     </x-header.nav-dropdown-item>
-                    <x-header.nav-dropdown-item href="#">Projektowanie i tworzenie sklepów internetowych
+                    <x-header.nav-dropdown-item href="{{route('www.ecommerce')}}">Projektowanie i tworzenie sklepów internetowych
                     </x-header.nav-dropdown-item>
                     <x-header.nav-dropdown-item href="#">Realizacje
                     </x-header.nav-dropdown-item>
