@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\WwwController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
@@ -15,6 +16,8 @@ Route::get('/projektowanie-i-tworzenie-logotypow', [ProjectsController::class, '
 Route::get('/projektowanie-i-tworzenie-wizytowek-firmowych', [ProjectsController::class, 'businessCards'])->name('projects.businessCards');
 Route::get('/projektowanie-papieru-firmowego', [ProjectsController::class, 'letterhead'])->name('projects.letterhead');
 Route::get('/projektowanie-plakatow-i-ulotek', [ProjectsController::class, 'posters'])->name('projects.posters');
+
+Route::get('/www', [WwwController::class, 'index'])->name('www.index');
 
 Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
 Route::get('/blog/artykul', [BlogController::class, 'show'])->name('blog.show');
