@@ -16,7 +16,7 @@
     "@type": "ListItem", 
     "position": 2, 
     "name": "Projektowanie i tworzenie logotypów",
-    "item": "https://marketingmix.pl/projektowanie/projektowanie-i-tworzenie-logotypow"  
+    "item": "https://marketingmix.pl/projektowanie-i-tworzenie-logotypow"  
   },
   
   ]

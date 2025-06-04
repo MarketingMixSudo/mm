@@ -12,4 +12,8 @@ class ProjectsController extends Controller
      public function logotypes(){
         return view ('pages.projects.logotypes');
     }
+
+     public function businessCards(){
+        return view ('pages.projects.business-cards');
+    }
 }
