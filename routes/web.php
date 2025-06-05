@@ -5,7 +5,9 @@ use App\Http\Controllers\WwwController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\CampaignsController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ContentController;
 use App\Http\Controllers\ProjectsController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -21,6 +23,10 @@ Route::get('/www', [WwwController::class, 'index'])->name('www.index');
 Route::get('/www/profesjonalne-tworzenie-stron-internetowych', [WwwController::class, 'websites'])->name('www.websites');
 Route::get('/www/projektowanie-tworzenie-sklepow-internetowych', [WwwController::class, 'ecommerce'])->name('www.ecommerce');
 Route::get('/realizacje', [WwwController::class, 'realisations'])->name('www.realisations');
+
+Route::get('/kampanie', [CampaignsController::class, 'index'])->name('campaigns.index');
+Route::get('/tresci', [ContentController::class, 'index'])->name('content.index');
+
 
 Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
 Route::get('/blog/artykul', [BlogController::class, 'show'])->name('blog.show');

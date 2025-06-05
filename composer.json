@@ -8,6 +8,7 @@
     "require": {
         "php": "^8.2",
         "awcodes/shout": "^2.1",
+        "blade-ui-kit/blade-heroicons": "^2.6",
         "codeat3/blade-iconpark": "^1.7",
         "filament/filament": "3.3",
         "joshembling/image-optimizer": "^1.6",

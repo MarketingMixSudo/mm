@@ -48,8 +48,8 @@
                 </x-header.nav-dropdown>
 
 
-                <x-header.nav-item href="#" label="Kampanie" />
-                <x-header.nav-item href="#" label="Treści" />
+                <x-header.nav-item href="{{route('campaigns.index')}}" label="Kampanie" />
+                <x-header.nav-item href="{{route('content.index')}}" label="Treści" />
                 <x-header.nav-item href="#" label="Foto / Video" />
                 <x-header.nav-item href="#" label="Druki firmowe" />
                 <x-header.nav-item href="{{route('contact')}}" activeRoute="contact" label="Kontakt" />
