@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CompanyFormsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WwwController;
 use App\Http\Controllers\BlogController;
@@ -28,12 +29,13 @@ Route::get('/realizacje', [WwwController::class, 'realisations'])->name('www.rea
 Route::get('/kampanie', [CampaignsController::class, 'index'])->name('campaigns.index');
 Route::get('/tresci', [ContentController::class, 'index'])->name('content.index');
 Route::get('/foto-video', [PhotoVideoController::class, 'index'])->name('photoVideo.index');
+Route::get('/druki-firmowe', [CompanyFormsController::class, 'index'])->name('companyForms.index');
 
+Route::get('/kontakt', [ContactController::class, 'index'])->name('contact');
 
 Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
 Route::get('/blog/artykul', [BlogController::class, 'show'])->name('blog.show');
 
-Route::get('/kontakt', [ContactController::class, 'index'])->name('contact');
 
 
 Route::fallback(function () {
