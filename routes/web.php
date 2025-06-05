@@ -10,6 +10,7 @@ use App\Http\Controllers\CampaignsController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ContentController;
 use App\Http\Controllers\PhotoVideoController;
+use App\Http\Controllers\PrivacyPolicyController;
 use App\Http\Controllers\ProjectsController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -36,6 +37,7 @@ Route::get('/kontakt', [ContactController::class, 'index'])->name('contact');
 Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
 Route::get('/blog/artykul', [BlogController::class, 'show'])->name('blog.show');
 
+Route::get('/polityka-prywatnosci', [PrivacyPolicyController::class, 'index'])->name('privacyPolicy');
 
 
 Route::fallback(function () {

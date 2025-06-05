@@ -1,40 +1,108 @@
-<x-layouts.app title="title" description="desc">
+<x-layouts.app title="Kontakt - Agencja Reklamowa MarketingMix"
+    description="Skontaktuj się z nami poprzez formularz kontaktowy - jesteśmy gotowi pomóc w rozwoju Twojej strategii marketingowej. Zadzwoń lub napisz do nas już teraz!">
+
+    @slot('seo')
+    <script type="application/ld+json">
+        {
+  "@context": "https://schema.org/", 
+  "@type": "BreadcrumbList", 
+  "itemListElement": [{
+    "@type": "ListItem", 
+    "position": 1, 
+    "name": "Home",
+    "item": "https://marketingmix.pl"  
+  },{
+    "@type": "ListItem", 
+    "position": 2, 
+    "name": "Kontakt",
+    "item": "https://marketingmix.pl/kontakt/"  
+  }]
+}
+    </script>
+    @endslot
+
 
     <x-hero title="Kontakt">
         <x-breadcrumbs.nav>
-            <x-breadcrumbs.item title="kontakt" />
+            <x-breadcrumbs.item href="{{route('contact')}}" title="Kontakt" class="font-medium" />
         </x-breadcrumbs.nav>
 
     </x-hero>
 
-    <section class="py-12">
 
-        <div class="max-w-screen-xl mx-auto ">
+    <section class="section">
 
-            <div>
-                <span class="text-primary-400 font-semibold ">Getting Touch</span>
-                <h2 class="text-4xl font-medium font-heading">Bądźmy w kontakcie</h2>
+        <div class="wrapper ">
+
+            <x-heading-classic preheading="Jesteśmy tu dla Ciebie!" heading="Bądźmy w kontakcie" />
+
+            <div class="grid grid-cols-1 md:grid-cols-2 mt-20 gap-y-12">
 
 
 
-                <div class="flex flex-col justify-start mt-6">
-                    <div class="flex justify-start items-center gap-3">
+                <div class="lg:ml-20 flex flex-col justify-center md:justify-start items-center md:items-start">
 
-                        <div class="bg-primary-400 p-2 rounded-full ">
-                            <x-lucide-phone class="size-6 text-font-light"/>
-                            
-                        </div>
-                        <div class="flex flex-col ">
+                    <span class=" font-medium text-3xl text-center">Dane kontaktowe</span>
 
-                            <span class="text-xl font-semibold">Telefon</span>
-                            <span class="text-xs">+48 123 456 789</span>
+                    <div class="flex flex-col justify-center md:justify-start mt-6">
+                        <div class="flex flex-col md:flex-row justify-center md:justify-start items-center gap-2 md:gap-5 text-center md:text-left">
+
+                            <div class="bg-primary-400 p-2 rounded-full ">
+                                <x-lucide-phone class="size-6 text-font-light" />
+
+                            </div>
+                            <a href="tel:+48453400244" class="flex flex-col ">
+
+                                <span class="text-2xl font-medium font-heading">Telefon</span>
+                                <span class="link-hover">+48 453 400 244</span>
+                            </a>
                         </div>
                     </div>
+
+                    <div class="flex flex-col justify-center md:justify-start mt-6">
+                        <div class="flex flex-col md:flex-row justify-center md:justify-start items-center gap-2 md:gap-5 text-center md:text-left">
+
+                            <div class="bg-primary-400 p-2 rounded-full ">
+                                <x-lucide-mail class="size-6 text-font-light" />
+
+                            </div>
+                            <a href="mailto:hello@marketingmix.pl" class="flex flex-col ">
+
+                                <span class="text-2xl font-medium font-heading">Email</span>
+                                <span class="link-hover">hello@marketingmix.pl</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col justify-center md:justify-start mt-6">
+                        <div class="flex flex-col md:flex-row justify-center md:justify-start items-center gap-2 md:gap-5 text-center md:text-left">
+
+                            <div class="bg-primary-400 p-2 rounded-full ">
+                                <x-lucide-map-pin class="size-6 text-font-light" />
+
+                            </div>
+                            <a href="mailto:hello@marketingmix.pl" class="flex flex-col ">
+
+                                <span class="text-2xl font-medium font-heading">Adres</span>
+                                <span class="link-hover">Ludźmierska 26A,<br /> 34-400 Nowy Targ</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <span class=" font-medium text-2xl my-6 block">Social Media</span>
+
+                    <x-socials large />
+
                 </div>
 
 
-            </div>
+                <div class="w-full">
 
+                    <span class=" font-medium text-3xl mb-10 block">Napisz do nas</span>
+                         <livewire:contact-form />
+
+                </div>
+            </div>
 
         </div>
 
