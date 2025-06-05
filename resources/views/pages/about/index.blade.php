@@ -1,9 +1,31 @@
 <x-layouts.app title="title" description="desc">
 
 
+    @slot('seo')
+    <script type="application/ld+json">
+        {
+  "@context": "https://schema.org/", 
+  "@type": "BreadcrumbList", 
+  "itemListElement": [{
+    "@type": "ListItem", 
+    "position": 1, 
+    "name": "Home",
+    "item": "https://marketingmix.pl"  
+  },{
+    "@type": "ListItem", 
+    "position": 2, 
+    "name": "Projektowanie",
+    "item": "https://marketingmix.pl/projektowanie/"  
+  }]
+}
+    </script>
+    @endslot
+
+
     <x-hero title="O nas">
         <x-breadcrumbs.nav>
-            <x-breadcrumbs.item title="test" />
+            <x-breadcrumbs.item href="{{route('photoVideo.index')}}" title="Zdjęcia hoteli, apartamentów, restauracji
+" class="font-medium" />
         </x-breadcrumbs.nav>
 
     </x-hero>

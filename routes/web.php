@@ -8,6 +8,7 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\CampaignsController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ContentController;
+use App\Http\Controllers\PhotoVideoController;
 use App\Http\Controllers\ProjectsController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -26,6 +27,7 @@ Route::get('/realizacje', [WwwController::class, 'realisations'])->name('www.rea
 
 Route::get('/kampanie', [CampaignsController::class, 'index'])->name('campaigns.index');
 Route::get('/tresci', [ContentController::class, 'index'])->name('content.index');
+Route::get('/foto-video', [PhotoVideoController::class, 'index'])->name('photoVideo.index');
 
 
 Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
