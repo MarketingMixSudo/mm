@@ -4,44 +4,38 @@ namespace App\Filament\Resources;
 
 use Filament\Forms;
 use Filament\Tables;
-use Filament\Forms\Set;
 use Filament\Forms\Form;
 use Filament\Tables\Table;
-use App\Models\Realisation;
+use App\Models\Testimonial;
 use Illuminate\Support\Str;
 use Filament\Resources\Resource;
-use App\Models\RealisationCategory;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-use App\Filament\Resources\RealisationResource\Pages;
+use App\Filament\Resources\TestimonialResource\Pages;
 use Livewire\Features\SupportFileUploads\TemporaryUploadedFile;
-use App\Filament\Resources\RealisationResource\RelationManagers;
+use App\Filament\Resources\TestimonialResource\RelationManagers;
 
-class RealisationResource extends Resource
+class TestimonialResource extends Resource
 {
-    protected static ?string $model = Realisation::class;
+    protected static ?string $model = Testimonial::class;
 
-    
-    protected static ?string $navigationIcon = 'lucide-file-stack';
+    protected static ?string $navigationIcon = 'lucide-message-circle';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('title')
-                    ->label('Tytuł')
+                Forms\Components\TextInput::make('name')
+                    ->label('Nazwa firmy')
                     ->minLength(3)
                     ->maxLength(255)
-                    ->required()
-                    ->columnSpanFull(),
+                    ->required(),
 
-
-
-                Forms\Components\FileUpload::make('thumbnail')
-                    ->label('Miniaturka')
-                    ->directory('realizacje')
+                Forms\Components\FileUpload::make('logo')
+                    ->label('Logo')
+                    ->directory('opinie')
                     ->getUploadedFileNameForStorageUsing(
-                        fn(TemporaryUploadedFile $file): string => 'realizacja-' . now()->format('Ymd_His') . '.' . $file->getClientOriginalExtension()
+                        fn(TemporaryUploadedFile $file): string => 'logo-' . now()->format('Ymd_His') . '.' . $file->getClientOriginalExtension()
                     )
                     ->image()
                     ->maxSize(8192)
@@ -56,16 +50,15 @@ class RealisationResource extends Resource
                     ->required()
                     ->columnSpanFull(),
 
-                Forms\Components\Select::make('realisation_category_id')
-                    ->label('Wybierz kategorię')
-                    ->relationship('realisationCategories', 'title',)
-                    ->multiple()
-                    ->preload()
-                    ->searchable()
+                Forms\Components\Textarea::make('content')
+                    ->label('Treść opini')
                     ->required()
-                    ->columnSpanFull()
-                    ->createOptionForm(RealisationCategory::getForm())
-                    ->placeholder('Mozesz wybrac kilka'),
+                    ->rows(4)
+                    ->columnSpanFull(),
+
+
+
+
             ]);
     }
 
@@ -75,13 +68,19 @@ class RealisationResource extends Resource
             ->reorderable('sort')
             ->defaultSort('sort', 'asc')
             ->columns([
-                Tables\Columns\ImageColumn::make('thumbnail')
+                Tables\Columns\TextColumn::make('sort')
+                    ->label('#')
+                    ->numeric()
+                    ->sortable(),
+
+                Tables\Columns\ImageColumn::make('logo')
                     ->label('Miniaturka')
                     ->circular(),
-                Tables\Columns\TextColumn::make('title')
-                    ->label('Tytuł')
-                    ->description(function (Realisation $record) {
-                        return Str::limit(strip_tags($record->short_description), 40);
+
+                Tables\Columns\TextColumn::make('name')
+                    ->label('Treść')
+                    ->description(function (Testimonial $record) {
+                        return Str::of($record->content)->limit(40);
                     })
                     ->sortable()
                     ->searchable(),
@@ -99,8 +98,7 @@ class RealisationResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
-                Tables\Actions\DeleteAction::make(),
-
+                  Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
@@ -119,23 +117,23 @@ class RealisationResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListRealisations::route('/'),
-            'create' => Pages\CreateRealisation::route('/create'),
-            'edit' => Pages\EditRealisation::route('/{record}/edit'),
+            'index' => Pages\ListTestimonials::route('/'),
+            'create' => Pages\CreateTestimonial::route('/create'),
+            'edit' => Pages\EditTestimonial::route('/{record}/edit'),
         ];
     }
 
     public static function getNavigationLabel(): string
     {
-        return ('Realizacja');
+        return ('Opinia');
     }
     public static function getPluralLabel(): string
     {
-        return ('Realizacje');
+        return ('Opinie');
     }
 
     public static function getLabel(): string
     {
-        return ('Realizacja');
+        return ('Opinia');
     }
 }

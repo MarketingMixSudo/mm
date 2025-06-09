@@ -1,12 +1,5 @@
 models:
-  Realisation:
-    title: text
-    thumbnail: text
-    relationships:
-      belongsToMany: RealisationCategory
-
-  RealisationCategory:
-    title: text unique
-    slug: text unique
-    relationships:
-      belongsToMany: Realisation
+  Testimonial:
+    name: text
+    logo: text
+    content: text
