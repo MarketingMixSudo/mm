@@ -35,200 +35,36 @@
 
     <section class="section">
 
-        <div class="wrapper  ">
+        <div class="wrapper  !max-w-screen-2xl">
 
 
-            <x-heading-classic preheading="Nasze realizacje" heading="Świadczyliśmy nasze usługi dla takich firm" />
+            <x-heading-classic preheading="Nasze realizacje" heading="Zobacz firmy które nam zaufały"/>
+
+            <div class="flex justify-start items-center gap-4 flex-wrap pt-16">
 
 
-            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-6 pt-12">
+                <x-button data-title="" aria-label="Pokaż wszystkie realizacje" class="btn-active realisationFilterBtn-js">
+                    Wszystkie</x-button>
 
-                <div class="border border-primary-400 bg-white rounded-xl flex justify-center items-center p-4">
 
-                    <img src="{{asset('dummy/karpatia.png')}}" alt="">
 
-                </div>
-                <div class="border border-primary-400 bg-white rounded-xl flex justify-center items-center p-4">
-
-                    <img src="{{asset('dummy/petmex.svg')}}" alt="">
-
-                </div>
-                <div class="border border-primary-400 bg-white rounded-xl flex justify-center items-center p-4">
-
-                    <img src="{{asset('dummy/karpatia.png')}}" alt="">
-
-                </div>
-                <div class="border border-primary-400 bg-white rounded-xl flex justify-center items-center p-4">
-
-                    <img src="{{asset('dummy/petmex.svg')}}" alt="">
-
-                </div>
-                <div class="border border-primary-400 bg-white rounded-xl flex justify-center items-center p-4">
-
-                    <img src="{{asset('dummy/karpatia.png')}}" alt="">
-
-                </div>
-                <div class="border border-primary-400 bg-white rounded-xl flex justify-center items-center p-4">
-
-                    <img src="{{asset('dummy/petmex.svg')}}" alt="">
-
-                </div>
-                <div class="border border-primary-400 bg-white rounded-xl flex justify-center items-center p-4">
-
-                    <img src="{{asset('dummy/karpatia.png')}}" alt="">
-
-                </div>
-                <div class="border border-primary-400 bg-white rounded-xl flex justify-center items-center p-4">
-
-                    <img src="{{asset('dummy/petmex.svg')}}" alt="">
-
-                </div>
-                <div class="border border-primary-400 bg-white rounded-xl flex justify-center items-center p-4">
-
-                    <img src="{{asset('dummy/karpatia.png')}}" alt="">
-
-                </div>
-                <div class="border border-primary-400 bg-white rounded-xl flex justify-center items-center p-4">
-
-                    <img src="{{asset('dummy/petmex.svg')}}" alt="">
-
-                </div>
+                @foreach ($categories as $category)
+                <x-button data-title="{{ $category->slug }}" aria-label="Filtruj przez: {{ $category->title }}"
+                    class="realisationFilterBtn-js ">{{ $category->title }}</x-button>
+                @endforeach
 
             </div>
 
 
+            <div class=" grid grid-cols-1 md:grid-cols-2  gap-7 pt-6 md:pt-12">
 
-        </div>
-    </section>
+                @foreach ($realisations as $realisation)
 
+                <x-realisation-card :realisation="$realisation" />
 
-  <section class="section">
-
-        <div class="wrapper  ">
-
-
-            <x-heading-classic  heading="Hotele i apartamenty" />
+                @endforeach
 
 
-            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-6 pt-12">
-
-                <div class="border border-primary-400 bg-white rounded-xl flex justify-center items-center p-4">
-
-                    <img src="{{asset('dummy/karpatia.png')}}" alt="">
-
-                </div>
-                <div class="border border-primary-400 bg-white rounded-xl flex justify-center items-center p-4">
-
-                    <img src="{{asset('dummy/petmex.svg')}}" alt="">
-
-                </div>
-                <div class="border border-primary-400 bg-white rounded-xl flex justify-center items-center p-4">
-
-                    <img src="{{asset('dummy/karpatia.png')}}" alt="">
-
-                </div>
-                <div class="border border-primary-400 bg-white rounded-xl flex justify-center items-center p-4">
-
-                    <img src="{{asset('dummy/petmex.svg')}}" alt="">
-
-                </div>
-                <div class="border border-primary-400 bg-white rounded-xl flex justify-center items-center p-4">
-
-                    <img src="{{asset('dummy/karpatia.png')}}" alt="">
-
-                </div>
-                <div class="border border-primary-400 bg-white rounded-xl flex justify-center items-center p-4">
-
-                    <img src="{{asset('dummy/petmex.svg')}}" alt="">
-
-                </div>
-                <div class="border border-primary-400 bg-white rounded-xl flex justify-center items-center p-4">
-
-                    <img src="{{asset('dummy/karpatia.png')}}" alt="">
-
-                </div>
-                <div class="border border-primary-400 bg-white rounded-xl flex justify-center items-center p-4">
-
-                    <img src="{{asset('dummy/petmex.svg')}}" alt="">
-
-                </div>
-                <div class="border border-primary-400 bg-white rounded-xl flex justify-center items-center p-4">
-
-                    <img src="{{asset('dummy/karpatia.png')}}" alt="">
-
-                </div>
-                <div class="border border-primary-400 bg-white rounded-xl flex justify-center items-center p-4">
-
-                    <img src="{{asset('dummy/petmex.svg')}}" alt="">
-
-                </div>
-
-            </div>
-
-
-
-        </div>
-    </section>
-  <section class="section">
-
-        <div class="wrapper  ">
-
-
-            <x-heading-classic  heading="Sklepy internetowe" />
-
-
-            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-6 pt-12">
-
-                <div class="border border-primary-400 bg-white rounded-xl flex justify-center items-center p-4">
-
-                    <img src="{{asset('dummy/karpatia.png')}}" alt="">
-
-                </div>
-                <div class="border border-primary-400 bg-white rounded-xl flex justify-center items-center p-4">
-
-                    <img src="{{asset('dummy/petmex.svg')}}" alt="">
-
-                </div>
-                <div class="border border-primary-400 bg-white rounded-xl flex justify-center items-center p-4">
-
-                    <img src="{{asset('dummy/karpatia.png')}}" alt="">
-
-                </div>
-                <div class="border border-primary-400 bg-white rounded-xl flex justify-center items-center p-4">
-
-                    <img src="{{asset('dummy/petmex.svg')}}" alt="">
-
-                </div>
-                <div class="border border-primary-400 bg-white rounded-xl flex justify-center items-center p-4">
-
-                    <img src="{{asset('dummy/karpatia.png')}}" alt="">
-
-                </div>
-                <div class="border border-primary-400 bg-white rounded-xl flex justify-center items-center p-4">
-
-                    <img src="{{asset('dummy/petmex.svg')}}" alt="">
-
-                </div>
-                <div class="border border-primary-400 bg-white rounded-xl flex justify-center items-center p-4">
-
-                    <img src="{{asset('dummy/karpatia.png')}}" alt="">
-
-                </div>
-                <div class="border border-primary-400 bg-white rounded-xl flex justify-center items-center p-4">
-
-                    <img src="{{asset('dummy/petmex.svg')}}" alt="">
-
-                </div>
-                <div class="border border-primary-400 bg-white rounded-xl flex justify-center items-center p-4">
-
-                    <img src="{{asset('dummy/karpatia.png')}}" alt="">
-
-                </div>
-                <div class="border border-primary-400 bg-white rounded-xl flex justify-center items-center p-4">
-
-                    <img src="{{asset('dummy/petmex.svg')}}" alt="">
-
-                </div>
 
             </div>
 
@@ -239,7 +75,10 @@
 
 
 
-   
+
+
+
+
 
 
 </x-layouts.app>

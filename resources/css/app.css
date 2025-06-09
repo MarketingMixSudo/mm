@@ -81,6 +81,10 @@
         @apply prose dark:prose-invert prose-a:no-underline text-font-dark dark:text-font-light prose-h2:text-primary-400 prose-h3:text-primary-400 prose-ul:ps-0 prose-ul:sm:ps-4
     }
 
+    .btn-active{
+  @apply text-font-light bg-primary-400 hover:bg-primary-600 hover:text-font-light 
+}
+
 }
 
 .outlined-text {

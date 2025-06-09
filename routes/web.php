@@ -35,7 +35,7 @@ Route::get('/druki-firmowe', [CompanyFormsController::class, 'index'])->name('co
 Route::get('/kontakt', [ContactController::class, 'index'])->name('contact');
 
 Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
-Route::get('/blog/artykul', [BlogController::class, 'show'])->name('blog.show');
+Route::get('/blog/{slug}', [BlogController::class, 'show'])->name('blog.show');
 
 Route::get('/polityka-prywatnosci', [PrivacyPolicyController::class, 'index'])->name('privacyPolicy');
 

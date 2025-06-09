@@ -1,208 +1,72 @@
-<x-layouts.app title="title" description="desc">
+<x-layouts.app title="Blog o marketingu i reklamie | MarketingMix.pl"
+    description="Porady, inspiracje i nowości ze świata marketingu i reklamy. Sprawdź, jak skutecznie promować firmę z MarketingMix.pl.">
+
+    @slot('seo')
+
+    @if ($posts->onFirstPage() === false)
+    <link rel="prev" href="{{ $posts->currentPage() === 2 ? route('blog.index') : $posts->previousPageUrl() }}">
+    @endif
+
+    @if ($posts->hasMorePages())
+    <link rel="next" href="{{ $posts->nextPageUrl() }}">
+    @endif
+
+    <script type="application/ld+json">
+        {
+  "@context": "https://schema.org/", 
+  "@type": "BreadcrumbList", 
+  "itemListElement": [{
+    "@type": "ListItem", 
+    "position": 1, 
+    "name": "Home",
+    "item": "https://marketingmix.pl"  
+  },{
+    "@type": "ListItem", 
+    "position": 2, 
+    "name": "Blog",
+    "item": "https://marketingmix.pl/blog/"  
+  }]
+}
+    </script>
+    @endslot
+
 
     <x-hero title="Blog">
         <x-breadcrumbs.nav>
-            <x-breadcrumbs.item title="blog" />
+            <x-breadcrumbs.item href="{{route('blog.index')}}" title="Blog" class="font-medium" />
         </x-breadcrumbs.nav>
 
     </x-hero>
 
 
-    <section class="py-12">
+    <section class="section">
 
-        <div class="max-w-screen-lg mx-auto">
+        <div class="wrapper !max-w-screen-lg">
 
+            @php
+            $firstPost = $posts->first();
+            $otherPosts = $posts->skip(1);
+            @endphp
 
-            <div class="w-full">
-                <img src="{{asset('dummy/blog.jpg')}}" alt="" class="w-full rounded-2xl max-h-[500px] object-cover">
-                <div class="space-y-2 mt-5">
-
-                    <h2 class="text-3xl font-semibold text-primary-400">Here comes the cost of consulting & creating a
-                        complex website</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid eos excepturi quibusdam
-                        architecto
-                        necessitatibus tempore quo illo, ipsam et assumenda, a nemo rerum quae error suscipit corrupti.
-                        Enim
-                        quos, distinctio iusto voluptate fuga voluptates molestias, aspernatur repellendus sapiente
-                        aliquid
-                        expedita.</p>
+            <x-post-card :post="$firstPost"/>
 
 
-                    <a href="{{route('blog.show')}}"
-                        class="text-primary-400 font-medium text-lg pt-4 flex justify-start items-center gap-2">Read
-                        more
+            @if($otherPosts->count() > 0)
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-10">
 
-                        <x-lucide-arrow-right class="size-4 text-primary-400" />
-                    </a>
-                </div>
-            </div>
+                @foreach ($otherPosts as $post )
+               <x-post-card :post="$post"/>
+                @endforeach
 
-
-            <div class="grid grid-cols-2 gap-8 mt-10">
-
-                <div class="w-full">
-                    <img src="{{asset('dummy/blog.jpg')}}" alt="" class="w-full rounded-2xl max-h-[500px] object-cover">
-                    <div class="space-y-2 mt-5">
-
-                        <h2 class="text-2xl font-semibold text-primary-400">Here comes the cost of consulting & creating
-                            a
-                            complex website</h2>
-                        <p class="line-clamp-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid eos
-                            excepturi quibusdam
-                            architecto
-                            necessitatibus tempore quo illo, ipsam et assumenda, a nemo rerum quae error suscipit
-                            corrupti.
-                            Enim
-                            quos, distinctio iusto voluptate fuga voluptates molestias, aspernatur repellendus sapiente
-                            aliquid
-                            expedita.</p>
-
-
-                        <a href="{{route('blog.show')}}"
-                            class="text-primary-400 font-medium text-lg pt-4 flex justify-start items-center gap-2">Read
-                            more
-
-                            <x-lucide-arrow-right class="size-4 text-primary-400" />
-                        </a>
-                    </div>
-                </div>
-                <div class="w-full">
-                    <img src="{{asset('dummy/blog.jpg')}}" alt="" class="w-full rounded-2xl max-h-[500px] object-cover">
-                    <div class="space-y-2 mt-5">
-
-                        <h2 class="text-2xl font-semibold text-primary-400">Here comes the cost of consulting & creating
-                            a
-                            complex website</h2>
-                        <p class="line-clamp-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid eos
-                            excepturi quibusdam
-                            architecto
-                            necessitatibus tempore quo illo, ipsam et assumenda, a nemo rerum quae error suscipit
-                            corrupti.
-                            Enim
-                            quos, distinctio iusto voluptate fuga voluptates molestias, aspernatur repellendus sapiente
-                            aliquid
-                            expedita.</p>
-
-
-                        <a href="{{route('blog.show')}}"
-                            class="text-primary-400 font-medium text-lg pt-4 flex justify-start items-center gap-2">Read
-                            more
-
-                            <x-lucide-arrow-right class="size-4 text-primary-400" />
-                        </a>
-                    </div>
-                </div>
-                <div class="w-full">
-                    <img src="{{asset('dummy/blog.jpg')}}" alt="" class="w-full rounded-2xl max-h-[500px] object-cover">
-                    <div class="space-y-2 mt-5">
-
-                        <h2 class="text-2xl font-semibold text-primary-400">Here comes the cost of consulting & creating
-                            a
-                            complex website</h2>
-                        <p class="line-clamp-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid eos
-                            excepturi quibusdam
-                            architecto
-                            necessitatibus tempore quo illo, ipsam et assumenda, a nemo rerum quae error suscipit
-                            corrupti.
-                            Enim
-                            quos, distinctio iusto voluptate fuga voluptates molestias, aspernatur repellendus sapiente
-                            aliquid
-                            expedita.</p>
-
-
-                        <a href="{{route('blog.show')}}"
-                            class="text-primary-400 font-medium text-lg pt-4 flex justify-start items-center gap-2">Read
-                            more
-
-                            <x-lucide-arrow-right class="size-4 text-primary-400" />
-                        </a>
-                    </div>
-                </div>
-                <div class="w-full">
-                    <img src="{{asset('dummy/blog.jpg')}}" alt="" class="w-full rounded-2xl max-h-[500px] object-cover">
-                    <div class="space-y-2 mt-5">
-
-                        <h2 class="text-2xl font-semibold text-primary-400">Here comes the cost of consulting & creating
-                            a
-                            complex website</h2>
-                        <p class="line-clamp-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid eos
-                            excepturi quibusdam
-                            architecto
-                            necessitatibus tempore quo illo, ipsam et assumenda, a nemo rerum quae error suscipit
-                            corrupti.
-                            Enim
-                            quos, distinctio iusto voluptate fuga voluptates molestias, aspernatur repellendus sapiente
-                            aliquid
-                            expedita.</p>
-
-
-                        <a href="{{route('blog.show')}}"
-                            class="text-primary-400 font-medium text-lg pt-4 flex justify-start items-center gap-2">Read
-                            more
-
-                            <x-lucide-arrow-right class="size-4 text-primary-400" />
-                        </a>
-                    </div>
-                </div>
-                <div class="w-full">
-                    <img src="{{asset('dummy/blog.jpg')}}" alt="" class="w-full rounded-2xl max-h-[500px] object-cover">
-                    <div class="space-y-2 mt-5">
-
-                        <h2 class="text-2xl font-semibold text-primary-400">Here comes the cost of consulting & creating
-                            a
-                            complex website</h2>
-                        <p class="line-clamp-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid eos
-                            excepturi quibusdam
-                            architecto
-                            necessitatibus tempore quo illo, ipsam et assumenda, a nemo rerum quae error suscipit
-                            corrupti.
-                            Enim
-                            quos, distinctio iusto voluptate fuga voluptates molestias, aspernatur repellendus sapiente
-                            aliquid
-                            expedita.</p>
-
-
-                        <a href="{{route('blog.show')}}"
-                            class="text-primary-400 font-medium text-lg pt-4 flex justify-start items-center gap-2">Read
-                            more
-
-                            <x-lucide-arrow-right class="size-4 text-primary-400" />
-                        </a>
-                    </div>
-                </div>
-                <div class="w-full">
-                    <img src="{{asset('dummy/blog.jpg')}}" alt="" class="w-full rounded-2xl max-h-[500px] object-cover">
-                    <div class="space-y-2 mt-5">
-
-                        <h2 class="text-2xl font-semibold text-primary-400">Here comes the cost of consulting & creating
-                            a
-                            complex website</h2>
-                        <p class="line-clamp-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid eos
-                            excepturi quibusdam
-                            architecto
-                            necessitatibus tempore quo illo, ipsam et assumenda, a nemo rerum quae error suscipit
-                            corrupti.
-                            Enim
-                            quos, distinctio iusto voluptate fuga voluptates molestias, aspernatur repellendus sapiente
-                            aliquid
-                            expedita.</p>
-
-
-                        <a href="{{route('blog.show')}}"
-                            class="text-primary-400 font-medium text-lg pt-4 flex justify-start items-center gap-2">Read
-                            more
-
-                            <x-lucide-arrow-right class="size-4 text-primary-400" />
-                        </a>
-                    </div>
-                </div>
 
 
 
 
             </div>
 
+            @endif
 
+            {{ $posts->links('vendor.pagination.tailwind') }}
         </div>
 
     </section>

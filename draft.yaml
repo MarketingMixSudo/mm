@@ -1,9 +1,12 @@
 models:
- Post:
-  meta_title: text nullable
-  meta_description: text nullable
-  title: text unique
-  slug: text unique
-  thumbnail: text
-  content: text 
-  published_at: datetime
+  Realisation:
+    title: text
+    thumbnail: text
+    relationships:
+      belongsToMany: RealisationCategory
+
+  RealisationCategory:
+    title: text unique
+    slug: text unique
+    relationships:
+      belongsToMany: Realisation

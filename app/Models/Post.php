@@ -21,6 +21,7 @@ class Post extends Model
         'title',
         'slug',
         'thumbnail',
+        'description',
         'content',
         'published_at',
     ];
@@ -44,10 +45,12 @@ class Post extends Model
         $query->where('published_at', '<=', Carbon::now());
     }
 
-    public function getPublishedDate()
-    {
-        return $this->published_at->format('d.m.Y');
-    }
+   public function getPublishedDate()
+{
+    return Carbon::parse($this->published_at)
+        ->locale('pl')
+        ->translatedFormat('d F Y');
+}
 
     public function getMetaTitle(): string
     {
@@ -58,12 +61,12 @@ class Post extends Model
         }
     }
 
-    public function getMetaDesc(): string
+    public function getMetaDescription(): string
     {
         if ($this->meta_desc) {
             return $this->meta_desc;
         } else {
-            return substr(strip_tags($this->content), 0, 150);
+            return substr(strip_tags($this->description), 0, 150);
         }
     }
 }

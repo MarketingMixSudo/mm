@@ -1,7 +1,13 @@
 created:
-    - database/factories/PostFactory.php
-    - database/migrations/2025_06_02_054755_create_posts_table.php
-    - app/Models/Post.php
+    - database/factories/RealisationFactory.php
+    - database/factories/RealisationCategoryFactory.php
+    - database/migrations/2025_06_05_121623_create_realisations_table.php
+    - database/migrations/2025_06_05_121624_create_realisation_categories_table.php
+    - database/migrations/2025_06_05_121625_create_realisation_realisation_category_table.php
+    - app/Models/Realisation.php
+    - app/Models/RealisationCategory.php
 models:
+    Post: { meta_title: 'text nullable', meta_description: 'text nullable', title: text, slug: text, thumbnail: text, content: text, published_at: datetime, description: text }
     User: { name: string, email: string, email_verified_at: 'datetime nullable', password: string, remember_token: 'string nullable' }
-    Post: { meta_title: 'text nullable', meta_description: 'text nullable', title: 'text unique', slug: 'text unique', thumbnail: text, content: text, published_at: datetime }
+    Realisation: { title: text, thumbnail: text, relationships: { belongsToMany: RealisationCategory } }
+    RealisationCategory: { title: 'text unique', slug: 'text unique', relationships: { belongsToMany: Realisation } }

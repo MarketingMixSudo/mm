@@ -75,6 +75,20 @@ class PostResource extends Resource
                                     ])
                                     ->columnSpanFull(),
 
+
+                                     TextInput::make('description')
+                                    ->label('Krótki opis')
+                                    
+                                    ->characterLimit(160)
+                                    ->minLength(100)
+                                    ->maxLength(200)
+                                    ->live(debounce: 1000)
+                                    ->afterStateUpdated(function (Livewire $livewire, Component $component) {
+                                        $validate = $livewire->validateOnly($component->getStatePath());
+                                    })
+                                    ->columnSpanFull()
+                                    ->required(),
+
                                 Forms\Components\RichEditor::make('content')
                                     ->label('Treść posta')
                                     ->required()
