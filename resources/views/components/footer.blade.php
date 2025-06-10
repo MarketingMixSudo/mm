@@ -1,86 +1,79 @@
-<div
-    class="bg-background-dark-800 rounded-2xl flex justify-center items-center p-12 py-24 max-w-screen-xl mx-auto my-24  flex-col gap-20">
-
-    <h2 class="font-heading text-5xl font-bold leading-normal w-[50%] text-center">Let’s disscuse make
-        something cool together</h2>
-
-    <a href="#" class="flex justify-center items-center gap-2 group">
-        <span class="group-hover:text-primary-400 duration-300">kontakt</span>
-    <x-lucide-arrow-right class="size-4 group-hover:text-primary-400 duration-300"/>
-
-
-    </a>
-</div>
-
+<x-footer-cta />
 
 <footer>
 
-    <div class="max-w-screen-xl mx-auto space-y-8">
+    <div class="wrapper  space-y-8">
 
 
-        <div class=" grid grid-cols-5 gap-6">
+        <div class=" grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-x-4 md:gap-x-12 gap-y-12 lg:gap-y-0 lg:gap-x-8  lg:pl-6">
 
 
 
-            <div class="space-y-6 col-span-2 w-[70%]">
-                <a href="#">
-                    <img src="{{asset('assets/logo.png')}}" alt="marketingmix">
+            <div class=" sm:col-span-3 lg:col-span-2 w-full lg:w-[70%] flex flex-col justify-center  items-center lg:items-start">
+                <a href="{{route('home')}}" aria-label="Strona główna">
+                    <img src="{{asset('/logo.webp')}}" alt="Agencja reklamowa MarketingMix" loading="lazy">
                 </a>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore numquam nemo quis esse quidem.
-                    Officia, nemo tempore? Tenetur, doloremque atque!</p>
-                <div>
-                    <p>sociale</p>
+               
+
+                <ul class="space-y-4 mt-6">
+                    <li class="flex justify-center lg:justify-start items-center gap-2"><x-lucide-map-pin class="size-6 text-primary-400"/><a href="https://maps.app.goo.gl/SQQRGsdukATydzwDA" target="_blank" rel="noreferrer nofollow" class="text-sm hover:text-primary-400 duration-300">Testowa 123, <br />34-400 Nowy Targ</a></li>
+                    <li class="flex justify-center lg:justify-start items-center gap-2"><x-lucide-mail class="size-6 text-primary-400"/><a href="mailto:hello@marketingmix.pl"  class="text-sm hover:text-primary-400 duration-300">hello@marketingmix.pl</a></li>
+                    <li class="flex justify-center lg:justify-start items-center gap-2"><x-lucide-phone class="size-6 text-primary-400"/><a href="tel:+48453400244"  class="text-sm hover:text-primary-400 duration-300">+48 453 400 244</a></li>
+                   
+
+                </ul>
+
+
+                <div class="pt-6 flex flex-col justify-center items-center lg:items-start">
+                    <span class="font-heading text-xl font-semibold pb-4 block text-primary-400">Social Media</span>
+                    <x-socials />
                 </div>
+
             </div>
 
-            <div class="space-y-6">
-                <span class="font-heading text-xl font-semibold">Linki</span>
-                <ul class="space-y-4">
-                    <li><a href="#">Link 1</a></li>
-                    <li><a href="#">Link 2</a></li>
-                    <li><a href="#">Link 3</a></li>
-                    <li><a href="#">Link 4</a></li>
+            <div class="space-y-6 text-center lg:text-left">
+                <span class="font-heading text-lg font-semibold uppercase text-primary-400 ">Projektowanie</span>
+                 <ul class="space-y-4 mt-4 w-full flex flex-col justify-center items-center lg:items-start">
+                    <li><a href="{{route('projects.logotypes')}}" class="hover:text-primary-400 duration-300 w-full">Projektowanie i tworzenie
+                            logotypów</a></li>
+                    <li><a href="{{route('projects.businessCards')}}" class="hover:text-primary-400 duration-300 w-full">Projektowanie i tworzenie
+                            wizytówek firmowych</a></li>
+                    <li><a href="{{route('projects.letterhead')}}" class="hover:text-primary-400 duration-300 w-full">Projektowanie papieru
+                            firmowego</a></li>
+                    <li><a href="{{route('projects.posters')}}" class="hover:text-primary-400 duration-300 w-full">Projektowanie plakatów i ulotek</a>
+                    </li>
                 </ul>
             </div>
-            <div class="space-y-6">
-                <span class="font-heading text-xl font-semibold">Kontakt</span>
-                <ul class="space-y-4">
-                    <li><a href="#">Testowa 123, <br />34-400 Nowy Targ</a></li>
-                    <li><a href="#">123 456 789</a></li>
-                    <li><a href="#">test@test.pl</a></li>
-
-                </ul>
-            </div>
-            <div class="space-y-6">
-                <span class="font-heading text-xl font-semibold">Sociale</span>
-                <ul class=" flex justify-start items-center gap-5">
-                    <li>
-                        <a href="#" class="w-10 h-10 flex items-center justify-center border rounded-full">
-                            f
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="w-10 h-10 flex items-center justify-center border rounded-full">
-                            f
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="w-10 h-10 flex items-center justify-center border rounded-full">
-                            f
-                        </a>
-                    </li>
+            <div class="space-y-6 text-center lg:text-left">
+                <span class="font-heading text-lg font-semibold uppercase text-primary-400 ">www</span>
+                 <ul class="space-y-4 mt-4 w-full flex flex-col justify-center items-center lg:items-start">
+                    <li><a href="{{route('projects.logotypes')}}" class="hover:text-primary-400 duration-300 w-full">Profesjonalne tworzenie stron
+                            internetowych</a></li>
+                    <li><a href="{{route('projects.businessCards')}}" class="hover:text-primary-400 duration-300 w-full">Projektowanie i tworzenie
+                            sklepów internetowych</a></li>
 
                 </ul>
             </div>
+            <div class="space-y-6 text-center lg:text-left w-full">
+                <span class="font-heading text-lg font-semibold uppercase text-primary-400">Pozostałe usługi</span>
+                <ul class="space-y-4 mt-4 w-full flex flex-col justify-center items-center lg:items-start">
+                    <li><a href="{{route('campaigns.index')}}" class="hover:text-primary-400 duration-300 w-full">Kampanie</a></li>
+                    <li><a href="{{route('content.index')}}" class="hover:text-primary-400 duration-300 w-full">Treści</a></li>
+                    <li><a href="{{route('photoVideo.index')}}" class="hover:text-primary-400 duration-300 !w-full">Foto / Video</a></li>
+                    <li ><a href="{{route('companyForms.index')}}" class="hover:text-primary-400 duration-300 ">Druki firmowe</a></li>
+
+                </ul>
+            </div>
+          
 
         </div>
 
         <hr class="border border-white/50">
 
-        <div class="flex justify-between pb-4">
-            <span>© 2024 MarketingMix</span>
+        <div class="flex flex-col xs:flex-row justify-center items-center xs:justify-between pb-4 w-full gap-4">
+            <span class="tex-sm order-1 xs:order-none">© <span class="footerYear--js"></span> MarketingMix</span>
 
-            <a href="#">Polityka prywatności</a>
+            <a href="{{route('privacyPolicy')}}" class="hover:text-primary-400 duration-300 text-sm">Polityka prywatności</a>
         </div>
 
     </div>

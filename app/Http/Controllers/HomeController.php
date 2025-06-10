@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Partner;
+use App\Models\Post;
 use App\Models\Realisation;
 use App\Models\Testimonial;
 use Illuminate\Http\Request;
@@ -28,6 +30,10 @@ class HomeController extends Controller
 
         $testimonials = Testimonial::orderBy('sort', 'asc')->get();
 
-        return view('pages.home.index', compact('categories', 'realisations','testimonials'));
+        $posts = Post::published()->orderByDesc('published_at')->take(8)->get();
+
+         $logos = Partner::orderBy('sort', 'asc')->get();
+
+        return view('pages.home.index', compact('categories', 'realisations','testimonials','posts','logos'));
     }
 }

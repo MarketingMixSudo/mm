@@ -1,10 +1,11 @@
 created:
-    - database/factories/TestimonialFactory.php
-    - database/migrations/2025_06_09_074139_create_testimonials_table.php
-    - app/Models/Testimonial.php
+    - database/factories/PartnerFactory.php
+    - database/migrations/2025_06_09_082256_create_partners_table.php
+    - app/Models/Partner.php
 models:
     Post: { meta_title: 'text nullable', meta_description: 'text nullable', title: text, slug: text, thumbnail: text, content: text, published_at: datetime, description: text }
     User: { name: string, email: string, email_verified_at: 'datetime nullable', password: string, remember_token: 'string nullable' }
     Realisation: { title: text, thumbnail: text, relationships: { belongsToMany: RealisationCategory } }
     RealisationCategory: { title: 'text unique', slug: 'text unique', relationships: { belongsToMany: Realisation } }
     Testimonial: { name: text, logo: text, content: text }
+    Partner: { name: text, logo: text }

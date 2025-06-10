@@ -153,7 +153,7 @@
             <x-heading-special heading="Zaufali nam" />
 
 
-            <x-logo-marquee />
+            {{-- <x-logo-marquee /> --}}
 
 
             <div class="flex justify-center items-center mt-16">

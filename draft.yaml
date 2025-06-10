@@ -1,5 +1,4 @@
 models:
-  Testimonial:
+  Partner:
     name: text
     logo: text
-    content: text

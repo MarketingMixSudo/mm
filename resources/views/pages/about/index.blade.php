@@ -146,7 +146,7 @@
     <div class="max-w-screen-xl mx-auto text-center">
 
         <h2 class="font-heading text-5xl font-semibold mb-6">Zaufali nam</h2>
-        <x-logo-marquee />
+        {{-- <x-logo-marquee /> --}}
     </div>
 
 </section>
