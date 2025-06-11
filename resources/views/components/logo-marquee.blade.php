@@ -1,5 +1,5 @@
 @props(['logos'])
-<div class="bg-background-light-400 py-2">
+<div class=" py-2">
 
     <div id="logo-marquee--js" class="overflow-x-hidden max-w-screen-2xl mx-auto">
         <div class="flex flex-wrap justify-center items-center gap-12  ">

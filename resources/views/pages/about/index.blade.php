@@ -1,4 +1,5 @@
-<x-layouts.app title="title" description="desc">
+<x-layouts.app title="O nas - Agencja Reklamowa MarketingMix"
+    description="Kim jesteśmy? Zespół doświadczonych praktyków z różnych dziedzin marketingu W Marketing Mix podchodzimy do promocji marki całościowo. Pracujemy w branży …">
 
 
     @slot('seo')
@@ -14,8 +15,8 @@
   },{
     "@type": "ListItem", 
     "position": 2, 
-    "name": "Projektowanie",
-    "item": "https://marketingmix.pl/projektowanie/"  
+    "name": "O nas",
+    "item": "https://marketingmix.pl/o-nas/"  
   }]
 }
     </script>
@@ -24,14 +25,13 @@
 
     <x-hero title="O nas">
         <x-breadcrumbs.nav>
-            <x-breadcrumbs.item href="{{route('photoVideo.index')}}" title="Zdjęcia hoteli, apartamentów, restauracji
-" class="font-medium" />
+            <x-breadcrumbs.item href="{{route('about.index')}}" title="O nas" class="font-medium" />
         </x-breadcrumbs.nav>
 
     </x-hero>
 
 
-    <section class="py-16">
+    {{-- <section class="py-16">
         <div class="max-w-screen-xl mx-auto space-y-12">
 
             <div class="flex w-full ">
@@ -66,10 +66,10 @@
             </div>
 
         </div>
-    </section>
+    </section> --}}
 
 
-    <section class="py-12">
+    {{-- <section class="py-12">
 
         <div class="bg-background-dark-800 rounded-xl max-w-screen-xl mx-auto  py-12 px-20 flex justify-between gap-12">
 
@@ -114,41 +114,129 @@
 
         </div>
 
-    </section>
+    </section> --}}
 
-   <section class="py-16">
-    <div class="max-w-screen-xl mx-auto space-y-12">
-        <div class="flex w-full relative gap-12">
-            <!-- Kontener na obrazek i tło -->
-            <div class="w-[45%] min-h-[450px] relative">
-                <!-- Tło (wystające spod obrazka) -->
-                <div class="absolute top-8 left-8 w-full h-full bg-primary-400 rounded-xl z-0"></div>
+    <section class="py-16">
+        <div class="max-w-screen-xl mx-auto space-y-12">
+            <div class="flex w-full relative gap-12">
+                <!-- Kontener na obrazek i tło -->
+                <div class="w-[45%] min-h-[450px] relative">
+                    <!-- Tło (wystające spod obrazka) -->
+                    <div class="absolute top-8 left-8 w-full h-full bg-primary-400 rounded-xl z-0"></div>
 
-                <!-- Obrazek -->
-                <img src="{{ asset('dummy/service.jpg') }}" alt=""
-                    class="w-full h-full object-cover rounded-xl transition duration-300 grayscale-0 hover:grayscale relative z-10" />
-            </div>
+                    <!-- Obrazek -->
+                    <img src="{{ asset('dummy/service.jpg') }}" alt=""
+                        class="w-full h-full object-cover rounded-xl transition duration-300 grayscale-0 hover:grayscale relative z-10" />
+                </div>
 
-            <!-- Tekst -->
-            <div class="flex flex-col gap-2 w-[55%] ml-32">
-                <span class="text-primary-400 font-medium text-xl">Our blog</span>
-                <h2 class="text-5xl font-bold font-heading">Explore recent publication</h2>
-                <p class="mt-12">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore, assumenda velit quos facilis eaque ea architecto veritatis vitae alias, commodi veniam animi autem! Maiores corporis accusantium earum nam deleniti voluptates, eveniet eligendi possimus animi vero tempore, ratione necessitatibus. A veritatis aut ipsum architecto distinctio quos!</p>
-                <hr class="w-[100px] border-primary-400 mt-12">
+                <!-- Tekst -->
+                <div class="flex flex-col gap-2 w-[55%] ml-32">
+                    <span class="text-primary-400 font-medium text-xl">Kim jesteśmy?</span>
+                    <h2 class="text-5xl font-bold font-heading">Zespół doświadczonych praktyków z różnych dziedzin
+                        marketingu</h2>
+                    <p class="mt-12">W Marketing Mix podchodzimy do promocji marki całościowo. Pracujemy w branży
+                        reklamowej już prawie 20 lat budując marki najbardziej znanych i rozpoznawalnych firm na
+                        Podhalu, ale i poza nim. Dobrze rozumiemy, że reklama to wiele przenikających się tematów.
+                        Planujemy i realizujemy to w ten sposób, aby wszystko ze sobą grało, było spójne i konsekwentne.
+
+                    </p>
+                    <hr class="w-[100px] border-primary-400 mt-12">
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
-<section class="py-12">
+    <section class="section">
+        <div class="wrapper ">
 
-    <div class="max-w-screen-xl mx-auto text-center">
+            <x-heading-classic preheading="Warto pracować z nami"
+                heading="Oszczędzisz czas, wysiłek <br>oraz uzyskasz lepsze wyniki" />
 
-        <h2 class="font-heading text-5xl font-semibold mb-6">Zaufali nam</h2>
-        {{-- <x-logo-marquee /> --}}
-    </div>
+            <div class="grid grid-cols-3 gap-12 pt-12">
 
-</section>
+                <div
+                    class="bg-primary-400  rounded-xl p-6 flex flex-col justify-center items-center gap-6 py-12 aspect-square text-center  text-font-light">
+
+
+
+
+                    <div class="flex flex-col justify-center items-center">
+
+                        <h3 class="text-2xl font-heading font-bold uppercase">Zlecisz nam <br>marketing</h3>
+                    </div>
+                    <p>Kompleksowo zajmiemy się promocją Twojej firmy. Nie ponosisz kosztów zatrudniania i wyposażania
+                        działu marketingu.
+
+
+
+
+
+                    </p>
+
+
+
+                </div>
+
+                <div
+                    class="bg-primary-400  rounded-xl p-6 flex flex-col justify-center items-center gap-6 py-12 aspect-square text-center text-font-light">
+
+
+
+
+                    <div class="flex flex-col justify-center items-center">
+
+
+                        <h3 class="text-2xl font-heading font-bold uppercase">Twój dedykowany opiekun</h3>
+                    </div>
+                    <p>Do prowadzenia spraw Twojej firmy zostanie oddelegowany nasz pracownik, który zajmie się
+                        komunikacją pomiędzy Tobą a zespołem.
+                    </p>
+
+
+
+                </div>
+
+                <div
+                    class="bg-primary-400  rounded-xl p-6 flex flex-col justify-center items-center gap-6 py-12 aspect-square text-center  text-font-light">
+
+
+
+
+                    <div class="flex flex-col justify-center items-center">
+
+
+                        <h3 class="text-2xl font-heading font-bold uppercase">Terminowa realizacja zadań</h3>
+                    </div>
+                    <p>Pilnujemy, aby deklarowane przez nas terminy były dotrzymane
+
+
+
+                    </p>
+
+
+
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="py-12">
+
+        <div class="max-w-screen-xl mx-auto text-center">
+
+            <h2 class="font-heading text-5xl font-semibold mb-6">Zaufali nam</h2>
+            
+            <x-logo-marquee :logos="$logos"/>
+        </div>
+
+    </section>
 
 </x-layouts.app>

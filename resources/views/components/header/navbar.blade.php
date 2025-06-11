@@ -48,12 +48,12 @@
                 </x-header.nav-dropdown>
                 
                 
-                <x-header.nav-item href="{{route('campaigns.index')}}" label="Kampanie" />
-                <x-header.nav-item href="{{route('content.index')}}" label="Treści" />
-                <x-header.nav-item href="{{route('photoVideo.index')}}" label="Foto / Video" />
-                <x-header.nav-item href="{{route('companyForms.index')}}" label="Druki firmowe" />
-                <x-header.nav-item href="{{route('contact')}}" activeRoute="contact" label="Kontakt" />
-                <x-header.nav-item href="{{route('blog.index')}}" activeRoute="blog.index" label="Blog" />
+                <x-header.nav-item href="{{route('campaigns.index')}}" activeRoute="campaigns.index" label="Kampanie" />
+                <x-header.nav-item href="{{route('content.index')}}" activeRoute="content.index" label="Treści" />
+                <x-header.nav-item href="{{route('photoVideo.index')}}" activeRoute="photoVideo.index" label="Foto / Video" />
+                <x-header.nav-item href="{{route('companyForms.index')}}" activeRoute="companyForms.index" label="Druki firmowe" />
+                <x-header.nav-item href="{{route('contact')}}" activeRoute="contact" activeRoute="contact" label="Kontakt" />
+                <x-header.nav-item href="{{route('blog.index')}}" activeRoute="blog.index" activeRoute="blog.index" label="Blog" />
             </ul>
             
             

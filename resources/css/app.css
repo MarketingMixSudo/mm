@@ -60,7 +60,7 @@
     }
 
     .nav__item--active {
-        @apply text-primary-400;
+        @apply text-primary-400 font-bold;
     }
 
     .section {
