@@ -1,5 +1,5 @@
 <div id="menu"
-    class="fixed top-0 bottom-0 right-0 left-0 sm:left-[50%] lg:left-[60%] 2xl:left-[75%]  flex flex-col justify-between px-7 py-5  bg-primary-400  opacity-0 duration-300 ease-out z-50 translate-x-[100%] overflow-y-auto"
+    class="fixed top-0 bottom-0 right-0 left-0 sm:left-[50%] lg:left-[60%] 2xl:left-[75%]  flex flex-col justify-between px-7 py-5  bg-primary-400  opacity-0 duration-300 ease-out z-50 translate-x-[100%] overflow-y-auto text-font-light"
     style="z-index: 10000000000">
 
     <div class="flex flex-col gap-16 pb-16">

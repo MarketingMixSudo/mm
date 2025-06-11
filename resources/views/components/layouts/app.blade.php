@@ -21,12 +21,12 @@
 <body>
 
 
-    {{--
-    <x-preloader /> --}}
+    
+    <x-preloader />
 
     
 
-    <header class="relative z-[9999999999]">
+    <header class="relative z-50">
   <x-header.navbar />
       
         

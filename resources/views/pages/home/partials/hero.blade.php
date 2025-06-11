@@ -1,5 +1,5 @@
-<section class=" h-[calc(100vh_-_120px)]">
-    <div class="max-w-screen-xl mx-auto space-y-12 pt-12">
+<section class=" h-[calc(100vh_-130px)] mt-[130px]">
+    <div class="max-w-screen-xl mx-auto space-y-12 pt-6">
 
 
         <h1 class="flex flex-col justify-start gap-1 leading-40 text-[140px] uppercase font-bold font-heading w-[60%]">

@@ -1,4 +1,4 @@
-<nav class="flex z-50 relative" aria-label="Breadcrumb">
+<nav class="flex relative" aria-label="Breadcrumb">
     <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse flex-col md:flex-row gap-1">
         <li class="inline-flex items-center">
             <a href="{{route('home')}}" class="inline-flex items-center text-sm ">
