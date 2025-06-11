@@ -22,7 +22,7 @@
 
             </div>
             <div class="flex justify-center items-center gap-6">
-                <x-socials />
+                <x-socials class="hidden xs:flex"/>
                 <x-header.theme-toggler />
             </div>
         </div>

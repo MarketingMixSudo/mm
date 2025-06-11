@@ -24,11 +24,13 @@
     {{--
     <x-preloader /> --}}
 
-    <header>
+    
 
-        <x-header.navbar />
-        {{--
-        <x-header.navbar-scroll />--}}
+    <header class="relative z-[9999999999]">
+  <x-header.navbar />
+      
+        
+        <x-header.navbar-scroll />
         <x-header.menu />
     </header>
 

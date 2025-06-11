@@ -2,5 +2,5 @@
 
 <li>
     <a href={{$href}}
-        class="{{ request()->routeIs($activeRoute) ? 'nav__item--active' : '' }} uppercase  font-medium tracking-wide hover:text-primary-400 duration-300 link-hover">{{$label}}</a>
+        class="{{ request()->routeIs($activeRoute) ? 'nav__item--active' : '' }} uppercase  font-medium tracking-wide hover:xl:text-primary-400 duration-300 link-hover">{{$label}}</a>
 </li>

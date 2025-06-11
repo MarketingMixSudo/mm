@@ -1,10 +1,8 @@
-<div class=" w-full  flex flex-col  gap-2 fixed left-0 right-0 top-0 shadow-xl  bg-background-light-400 dark:bg-background-dark-800  duration-500 navbar--js" >
+<div class="fixed left-0 right-0 top-0 bg-background-light-400 dark:bg-background-dark-800 shadow-xl duration-500   -translate-y-[100%] navbarScroll--js">
 
 
-    <x-header.topbar />
-
-    <nav
-        class=" w-full h-full flex justify-between items-center max-w-screen-3xl mx-auto  px-2 sm:px-6  relative pb-4">
+<nav
+        class=" py-6  flex justify-between items-center max-w-screen-3xl mx-auto  px-2 sm:px-6   pb-4 ">
 
         <a href="{{ route('home') }}" aria-label="Strona główna" ><img src=" {{ asset('assets/logo.png') }}"
             alt="Agencja Reklamowa MarketingMix" class="w-[200px] sm:w-auto "></a>
@@ -68,8 +66,5 @@
         
     </div>
 
-    </nav>
-
-    
-
+    </nav>    
 </div>

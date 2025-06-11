@@ -29,14 +29,14 @@
              
 
 
-                <x-socials/>
+                <x-socials mobileMenu/>
 
             </div>
             <div class="border-l pl-2 flex justify-center items-center gap-2 pt-0.5">
-                <a href="tel:" class="group" aria-label="telefon">
+                <a href="tel:+48 453 400 244" class="group" aria-label="telefon">
                     <x-lucide-phone class="w-5 stroke-1 text-white group-hover:scale-105 duration-300" />
                 </a>
-                <a href="mailto:" class="group" aria-label="mail">
+                <a href="mailto:hello@marketingmix.pl" class="group" aria-label="mail">
                     <x-lucide-mail class="w-5 stroke-1 text-white group-hover:scale-105 duration-300" />
                 </a>
             </div>
