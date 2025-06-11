@@ -3,7 +3,7 @@
 
     <div class="max-w-screen-2xl mx-auto">
 
-        <h2 class="font-heading text-7xl font-bold uppercase">Testimonials</h2>
+        <h2 class="font-heading text-7xl font-bold uppercase">Opinie naszych klientów</h2>
         <hr class="border-primary-400 pb-12">
 
 
@@ -15,7 +15,7 @@
                 @foreach ($testimonials as $testimonial)
                 <div class="rounded-xl border border-primary-400 p-8 testimonial-card-js swiper-slide ">
 
-                    <div class="flex justify-start items-center gap-4 border-b pb-8 border-white/10">
+                    <div class="flex justify-start items-center gap-4 border-b pb-8 border-black/40 dark:border-white/10 ">
 
                         <x-lucide-quote class="text-primary-400 size-8" />
                         <span class="text-2xl font-medium font-heading">{{$testimonial->name}}</span>

@@ -5,7 +5,7 @@
     <div class="flex gap-4 justify-center items-center">
 
         <div
-            class="border bg-gray-600 text-font-light py-1 px-2 font-medium rounded-md group-hover:bg-primary-400 duration-300">
+            class="border bg-primary-400 text-font-light py-1 px-2 font-medium rounded-md group-hover:bg-primary-600 duration-300">
            {{$number}}
         </div>
 

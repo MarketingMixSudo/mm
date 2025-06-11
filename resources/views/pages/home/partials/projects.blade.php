@@ -5,8 +5,8 @@
 
 
         <div class=" flex flex-col gap-2 text-center">
-            <span class="text-primary-400 font-medium text-xl">Lorem, ipsum.</span>
-            <h2 class="text-5xl font-bold font-heading">Nasze projekty</h2>
+            <span class="text-primary-400 font-medium text-xl">Od wizji do rzeczywistości</span>
+            <h2 class="text-5xl font-bold font-heading">Zobacz nasze projekty</h2>
 
         </div>
 

@@ -3,10 +3,10 @@
 
         <!-- Część tekstowa przesunięta do środka -->
         <div class="col-span-3 col-start-3 flex flex-col gap-2">
-            <span class="text-primary-400 font-medium text-xl">Our blog</span>
-            <h2 class="text-5xl font-bold font-heading">Explore recent publication</h2>
+            <span class="text-primary-400 font-medium text-xl">Wiedza, inspiracje <br/> i porady marketingowe</span>
+            <h2 class="text-5xl font-bold font-heading">Nasz blog o marketingu i reklamie</h2>
             <a href="{{route('blog.index')}}" class="flex justify-start items-center gap-2 group mt-12">
-                <span class="group-hover:text-primary-400 duration-300">wszytkie posty</span>
+                <span class="group-hover:text-primary-400 duration-300">wszytkie artykuły</span>
                 <x-lucide-arrow-right class="size-4 group-hover:text-primary-400 duration-300" />
             </a>
         </div>
