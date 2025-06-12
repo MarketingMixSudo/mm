@@ -59,8 +59,16 @@
             hover:after:scale-x-100;
     }
 
+    .link-hover--light{
+         @apply relative w-fit block 
+            after:block after:content-[''] after:absolute after:h-[1px] 
+            after:bg-background-light-400 after:w-[75%] after:scale-x-0 
+            after:transition after:duration-300 after:origin-left 
+            hover:after:scale-x-100;
+    }
+
     .nav__item--active {
-        @apply text-primary-400 font-bold;
+        @apply xl:text-primary-400 font-bold;
     }
 
     .section {

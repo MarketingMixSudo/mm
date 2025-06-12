@@ -15,7 +15,7 @@
             <div class="w-1/2 flex justify-center items-center">
 
                 
- <a href="{{route('about.index')}}" class="relative size-36 group">
+ <a href="{{route('about.index')}}" class="relative size-36 group" aria-label="Dowiedz się więcej">
   <!-- Fioletowe tło -->
   <div class="absolute inset-0 bg-primary-400 rounded-full flex items-center justify-center">
     <!-- Białe koło w środku -->

@@ -1,3 +1,4 @@
+{{-- completed --}}
 @props(['class' => '','scroll' => false])
 
 <button id="openMenu" class="flex flex-col gap-[7px] w-[50px] group p-2 cursor-pointer {{$class}} hamburger-js" aria-label="otwórz menu">

@@ -12,7 +12,7 @@
     @include('partials.favicon')
     @include('partials.seo')
 
-        {!! $seo ?? '' !!}
+    {!! $seo ?? '' !!}
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
@@ -21,15 +21,15 @@
 <body>
 
 
-    
+
     <x-preloader />
 
-    
+
 
     <header class="relative z-50">
-  <x-header.navbar />
-      
-        
+        <x-header.navbar />
+
+
         <x-header.navbar-scroll />
         <x-header.menu />
     </header>
