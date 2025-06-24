@@ -36,11 +36,13 @@
     body {
         @apply bg-white dark:bg-background-dark-400 font-text font-light text-font-dark dark:text-font-light overflow-x-hidden;
     }
-
-  
 }
 
 @layer utilities {
+    .perspective-800 {
+        perspective: 800px;
+    }
+
     .topbar__link {
         @apply relative flex justify-center items-center gap-2 text-xs;
     }
@@ -59,8 +61,8 @@
             hover:after:scale-x-100;
     }
 
-    .link-hover--light{
-         @apply relative w-fit block 
+    .link-hover--light {
+        @apply relative w-fit block 
             after:block after:content-[''] after:absolute after:h-[1px] 
             after:bg-background-light-400 after:w-[75%] after:scale-x-0 
             after:transition after:duration-300 after:origin-left 
@@ -72,27 +74,35 @@
     }
 
     .section {
-        @apply py-6 lg:py-12;
+        @apply py-6 lg:py-12 xl:py-16;
     }
-    .wrapper{
-        @apply max-w-screen-xl mx-auto px-6 2xl:px-0
-    }
-
-
-    .prose__preheading{
-        @apply font-medium font-heading text-primary-400
-    }
-    .prose__heading{
-        @apply !mb-6 !mt-2 text-3xl font-heading !text-font-dark dark:!text-font-light
-    }
-    .prose__content{
-        @apply prose dark:prose-invert prose-a:no-underline text-font-dark dark:text-font-light prose-h2:text-primary-400 prose-h3:text-primary-400 prose-ul:ps-0 prose-ul:sm:ps-4
+    .wrapper {
+        @apply max-w-screen-xl mx-auto px-6 2xl:px-0;
     }
 
-    .btn-active{
-  @apply text-font-light bg-primary-400 hover:bg-primary-600 hover:text-font-light 
-}
+    .section__preheading {
+        @apply text-primary-400 font-medium text-xl;
+    }
+    .section__heading {
+        @apply text-5xl font-bold font-heading;
+    }
+    .section__text{
+        @apply mt-4
+    }
 
+    .prose__preheading {
+        @apply font-medium font-heading text-primary-400;
+    }
+    .prose__heading {
+        @apply !mb-6 !mt-2 text-3xl font-heading !text-font-dark dark:!text-font-light;
+    }
+    .prose__content {
+        @apply prose dark:prose-invert prose-a:no-underline text-font-dark dark:text-font-light prose-h2:text-primary-400 prose-h3:text-primary-400 prose-ul:ps-0 prose-ul:sm:ps-4;
+    }
+
+    .btn-active {
+        @apply text-font-light bg-primary-400 hover:bg-primary-600 hover:text-font-light;
+    }
 }
 
 .outlined-text {
@@ -114,15 +124,14 @@
     opacity: 1;
 }
 
-
 .perspective {
-  perspective: 1000px;
+    perspective: 1000px;
 }
 
 .preserve-3d {
-  transform-style: preserve-3d;
+    transform-style: preserve-3d;
 }
 
 .backface-hidden {
-  backface-visibility: hidden;
+    backface-visibility: hidden;
 }

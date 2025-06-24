@@ -6,6 +6,6 @@ if (marqueeEl) {
     new marquee(marqueeEl, {
         duplicated: true,
         speed: 80,
-        pauseOnHover: true
+        pauseOnHover: false
     });
 }
