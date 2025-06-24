@@ -94,134 +94,50 @@
     </section>
 
 
-    <section>
+    <section class="section !pt-0">
+        {{-- wrapper --}}
         <div class="wrapper !max-w-screen-2xl">
 
             <div class="max-w-screen-lg mx-auto">
 
                 <x-heading-classic preheading="Co możemy dla Ciebie zrobić?"
-                heading="Kompleksowo zajmiemy się treściami na potrzeby Twojego marketingu" />
+                    heading="Kompleksowo zajmiemy się treściami na potrzeby Twojego marketingu" />
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 2xl:gap-12 pt-12">
-
-
-                <div
-                    class="bg-primary-400  rounded-xl p-6 flex flex-col justify-center items-center gap-6 py-12 min-h-[350px] text-center  text-font-light">
-
-
-
-
-                    <div class="flex flex-col justify-center items-center">
-
-                        <x-lucide-calendar class="w-20 text-font-light stroke-1 mb-3" />
-                        <span class="text-2xl font-heading font-bold uppercase">Planowanie publikacji
-
-                        </span>
-                    </div>
-                    <p>Działamy według planu - Ty zyskujesz kontrolę.
-
-
-
-                    </p>
-
-
-
-                </div>
-              
-               
-
-                <div
-                    class="bg-primary-400  rounded-xl p-6 flex flex-col justify-center items-center gap-6 py-12  text-center  text-font-light min-h-[350px]">
-
-
-
-
-                    <div class="flex flex-col justify-center items-center">
-
-                        <x-lucide-settings class="w-20 text-font-light stroke-1 mb-3" />
-                        <span class="text-2xl font-heading font-bold uppercase">Spójna <br>komunikacja
-
-                        </span>
-                    </div>
-                    <p>Wszystkie materiały są konsekwentne i powiązane.
-
-
-
-
-
-                    </p>
-
-
-
-                </div>
-                <div
-                    class="bg-primary-400  rounded-xl p-6 flex flex-col justify-center items-center gap-6 py-12 min-h-[350px] text-center  text-font-light">
-
-
-
-
-                    <div class="flex flex-col justify-center items-center">
-
-                        <x-heroicon-o-light-bulb class="w-20 text-font-light stroke-1 mb-3" />
-                        <span class="text-2xl font-heading font-bold uppercase">Kreatywne 
-
- <br>podejście
-
-                        </span>
-                    </div>
-                    <p>Klienci pokochają Twoje nowe treści reklamowe.
-
-
-
-
-
-
-
-                    </p>
-
-
-
-                </div>
-
- <div
-                    class="bg-primary-400  rounded-xl p-6 flex flex-col justify-center items-center gap-6 py-12 min-h-[350px] text-center  text-font-light">
-
-
-
-
-                    <div class="flex flex-col justify-center items-center">
-
-                        <x-lucide-thumbs-up class="w-20 text-font-light stroke-1 mb-3" />
-                        <span class="text-2xl font-heading font-bold uppercase">Social 
-
- 
-
- <br>media
-
-                        </span>
-                    </div>
-                    <p>Specjalizujemy się w angażowaniu społeczności.
-
-
-
-
-
-
-
-
-
-                    </p>
-
-
-
-                </div>
-
+            {{-- container --}}
+            <div class="flex flex-wrap justify-center items-strech  gap-6 2xl:gap-12 pt-12">
+
+                {{-- card --}}
+                <x-tilt-card small headingH3="Planowanie publikacji" text="Działamy według planu - Ty zyskujesz kontrolę.">
+                      <x-lucide-calendar class="w-20 text-font-light stroke-1 mb-3" />
+                </x-tilt-card>
+
+                {{-- card --}}
+                <x-tilt-card small headingH3="Spójna <br>komunikacja" text="Wszystkie materiały są konsekwentne i powiązane.">
+                      <x-lucide-settings class="w-20 text-font-light stroke-1 mb-3" />
+                </x-tilt-card>
+
+                {{-- card --}}
+                <x-tilt-card small headingH3="Kreatywne <br> podejście" text="Klienci pokochają Twoje nowe treści reklamowe.">
+                      <x-heroicon-o-light-bulb class="w-20 text-font-light stroke-1 mb-3" />
+                </x-tilt-card>
+
+                {{-- card --}}
+                <x-tilt-card small headingH3="Social <br> Media" text="Specjalizujemy się w angażowaniu społeczności.">
+                         <x-lucide-thumbs-up class="w-20 text-font-light stroke-1 mb-3" />
+                </x-tilt-card>
+
+
+            
             </div>
         </div>
     </section>
 
+
+
   
+
+
 
 
 

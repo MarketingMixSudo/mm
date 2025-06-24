@@ -6,7 +6,7 @@
 
 
         <img src="{{asset('storage/'.$post->thumbnail)}}" alt="{{$post->title}}"
-            class="w-full rounded-2xl max-h-[500px] object-cover group-hover:grayscale duration-300 group-hover:scale-105">
+            class="w-full rounded-2xl min-h-[330px] max-h-[500px] object-cover group-hover:grayscale duration-300 group-hover:scale-105">
     </a>
 
     <div class="space-y-2 mt-5">

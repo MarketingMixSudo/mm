@@ -34,7 +34,7 @@
                 @foreach ($realisations as $realisation)
 
 
-              <x-realisation-card :realisation="$realisation" />
+              <x-realisation-card :realisation="$realisation" class="swiper-slide " />
 
 
                 @endforeach

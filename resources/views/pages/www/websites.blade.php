@@ -156,25 +156,7 @@
 
 
 
-    <section class="section">
-
-
-        <div class="wrapper !max-w-screen-2xl">
-
-
-
-            <x-heading-special heading="Zaufali nam" />
-
-
-            <x-logo-marquee />
-
-
-            <div class="flex justify-center items-center mt-16">
-
-                <x-link-btn href="#" label="wszystkie realizacje" />
-            </div>
-
-    </section>
+  
 
 
 </x-layouts.app>

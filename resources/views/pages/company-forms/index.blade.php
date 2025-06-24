@@ -64,96 +64,34 @@
     </section>
 
 
-    <section>
-        <div class="wrapper !max-w-screen-2xl">
+    <section class="section !pt-0">
+    {{-- wrapper --}}
+    <div class="wrapper !max-w-screen-2xl">
 
-            
+        {{-- container --}}
+        <div class="flex flex-wrap justify-center items-strech  gap-6 2xl:gap-12 pt-12">
 
-            <div class="grid grid-cols-1  sm:grid-cols-3 gap-6 2xl:gap-12 ">
+            {{-- card --}}
+            <x-tilt-card headingH2="Najlepsze <br>ceny" text="Dzięki wieloletniej współpracy korzystamy z wysokich rabatów."/>
 
+            {{-- card --}}
+            <x-tilt-card headingH2="Bezkompromisowa <br> jakość" text="Kręcimy reportaże, spoty reklamowe, filmy edukacyjne. Obsługujemy transmisje online."/>
 
-
-
-                <div
-                    class="bg-primary-400  rounded-xl p-6 flex flex-col justify-center items-center gap-6 py-12 min-h-[350px] text-center  text-font-light">
-
-
-
-
-                    <div class="flex flex-col justify-center items-center">
-
-                        
-                        <span class="text-4xl font-heading font-bold uppercase">Najlepsze 
+            {{-- card --}}
+            <x-tilt-card headingH2="Kompleksowa <br>usługa" text="Twoje druki będą integralną częścią całej strategii marketingowej."/>
+              
 
 
+           
 
 
-                            <br>ceny
-
-                        </span>
-                    </div>
-                    <p>Dzięki wieloletniej współpracy korzystamy z wysokich rabatów.
-
-                    </p>
-                </div>
-
-
-
-
-                <div
-                    class="bg-primary-400  rounded-xl p-6 flex flex-col justify-center items-center gap-6 py-12 min-h-[350px] text-center  text-font-light">
-
-
-
-
-                    <div class="flex flex-col justify-center items-center">
-
-                     
-                        <span class="text-4xl font-heading font-bold uppercase">Bezkompromisowa
-
-
-
-                            <br> jakość
-
-
-                        </span>
-                    </div>
-                    <p>Kręcimy reportaże, spoty reklamowe, filmy edukacyjne. Obsługujemy transmisje online.
-
-                    </p>
-                </div>
-
-                <div
-                    class="bg-primary-400  rounded-xl p-6 flex flex-col justify-center items-center gap-6 py-12 min-h-[350px] text-center  text-font-light">
-
-
-
-
-                    <div class="flex flex-col justify-center items-center">
-
-                     
-                        <span class="text-4xl font-heading font-bold uppercase">Kompleksowa
-
-
-
-                            <br>usługa
-
-                        </span>
-                    </div>
-                    <p>Twoje druki będą integralną częścią całej strategii marketingowej.
-
-
-
-
-
-
-
-                    </p>
-                </div>
-
-            </div>
         </div>
-    </section>
+    </div>
+</section>
+
+
+
+ 
 
 <section class="section">
 

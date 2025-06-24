@@ -129,65 +129,29 @@
 
         <div class="wrapper !max-w-screen-2xl">
 
-         
 
-<x-heading-special heading="Realizacje" subheading="Portfolio tworzonych przez nas stron i sklepów internetowych"/>
+
+            <x-heading-special heading="Realizacje"
+                subheading="Portfolio tworzonych przez nas stron i sklepów internetowych" />
 
             <div class=" w-full swiper  wwwwRealisationsCarousel--js ">
                 <div class="swiper-wrapper">
 
 
-                    <div class=" !rounded-xl  overflow-hidden  swiper-slide">
-                        <img src="{{asset('dummy/blog.jpg')}}" alt="" class=" w-full h-full object-cover -z-10"
-                            loading="lazy">
-
-                        <div
-                            class=" flex flex-col gap-4 justify-center items-center bg-primary-400 text-font-light p-4">
-                            <h4 class="z-10 text-xl font-medium">Jakaś strona</h4>
-
-                        </div>
-
-                    </div>
-                    <div class=" !rounded-xl  overflow-hidden  swiper-slide">
-                        <img src="{{asset('dummy/blog.jpg')}}" alt="" class=" w-full h-full object-cover -z-10"
-                            loading="lazy">
-
-                        <div
-                            class=" flex flex-col gap-4 justify-center items-center bg-primary-400 text-font-light p-4">
-                            <h4 class="z-10 text-xl font-medium">Jakaś strona</h4>
-
-                        </div>
-
-                    </div>
-                    <div class=" !rounded-xl  overflow-hidden  swiper-slide">
-                        <img src="{{asset('dummy/blog.jpg')}}" alt="" class=" w-full h-full object-cover -z-10"
-                            loading="lazy">
-
-                        <div
-                            class=" flex flex-col gap-4 justify-center items-center bg-primary-400 text-font-light p-4">
-                            <h4 class="z-10 text-xl font-medium">Jakaś strona</h4>
-
-                        </div>
-
-                    </div>
-                    <div class=" !rounded-xl  overflow-hidden  swiper-slide">
-                        <img src="{{asset('dummy/blog.jpg')}}" alt="" class=" w-full h-full object-cover -z-10"
-                            loading="lazy">
-
-                        <div
-                            class=" flex flex-col gap-4 justify-center items-center bg-primary-400 text-font-light p-4">
-                            <h4 class="z-10 text-xl font-medium">Jakaś strona</h4>
-
-                        </div>
-
-                    </div>
+                   <x-realisation-carousel-card title="Jakaś strona"/>
+                   <x-realisation-carousel-card title="Jakaś strona"/>
+                   <x-realisation-carousel-card title="Jakaś strona"/>
+                   <x-realisation-carousel-card title="Jakaś strona"/>
+                   <x-realisation-carousel-card title="Jakaś strona"/>
+                   
+                   
                 </div>
 
             </div>
 
             <div class="flex justify-center items-center mt-16">
 
-                <x-link-btn href="#" label="Zobacz wszystkie" />
+                <x-link-btn href="{{route('www.realisations')}}" label="Zobacz wszystkie" />
             </div>
 
     </section>

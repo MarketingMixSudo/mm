@@ -32,7 +32,7 @@
 
 
 
-    
+
 
     <section class="section">
 
@@ -66,103 +66,55 @@
         </div>
     </section>
 
-<section>
+
+
+    <section class="section !pt-0">
+        {{-- wrapper --}}
         <div class="wrapper !max-w-screen-2xl">
 
             <div class="max-w-screen-lg mx-auto">
 
-                <x-heading-classic preheading="co zyskasz współpracując z nami" heading="Znakomitej jakości materiały dla Twoich projektów
+                <x-heading-classic preheading="Co zyskasz współpracując z nami" heading="Znakomitej jakości materiały dla Twoich projektów
 " />
             </div>
 
-            <div class="grid grid-cols-1  sm:grid-cols-3 gap-6 2xl:gap-12 pt-12">
+            {{-- container --}}
+            <div class="flex flex-wrap justify-center items-strech  gap-6 2xl:gap-12 pt-12">
+
+                {{-- card --}}
+                <x-tilt-card headingH3="Znakomite <br>zdjęcia"
+                    text="Przeprowadzimy profesjonalną sesję zdjęciową. Realizujemy projekty od A do Z – zadbamy o wszystko.">
+                    <x-lucide-camera class="w-20 text-font-light stroke-1 mb-3" />
+                </x-tilt-card>
+
+                {{-- card --}}
+                <x-tilt-card headingH3="Kreatywne <br> filmy"
+                    text="Kręcimy reportaże, spoty reklamowe, filmy edukacyjne. Obsługujemy transmisje online.">
+                    <x-lucide-video class="w-20 text-font-light stroke-1 mb-3" />
+                </x-tilt-card>
+
+                {{-- card --}}
+                <x-tilt-card headingH3="Treści, <br>które angażują" text="Szczegółowo planujemy każdy projekt, tak, żeby efekty naszej pracy wzbudzały zachwyt Twoich
+                        Klientów.">
+                    <x-lucide-pencil class="w-20 text-font-light stroke-1 mb-3" />
+                </x-tilt-card>
 
 
 
 
-  <div
-                    class="bg-primary-400  rounded-xl p-6 flex flex-col justify-center items-center gap-6 py-12 min-h-[350px] text-center  text-font-light">
-
-
-
-
-                    <div class="flex flex-col justify-center items-center">
-
-                        <x-lucide-camera class="w-20 text-font-light stroke-1 mb-3" />
-                        <span class="text-2xl font-heading font-bold uppercase">Znakomite
-
-
-
-                            <br>zdjęcia
-
-                        </span>
-                    </div>
-                    <p>Przeprowadzimy profesjonalną sesję zdjęciową. Realizujemy projekty od A do Z – zadbamy o wszystko.
-
-
-
-                    </p>
-                </div>
-
-
-
-
-                <div
-                    class="bg-primary-400  rounded-xl p-6 flex flex-col justify-center items-center gap-6 py-12 min-h-[350px] text-center  text-font-light">
-
-
-
-
-                    <div class="flex flex-col justify-center items-center">
-
-                        <x-lucide-video class="w-20 text-font-light stroke-1 mb-3" />
-                        <span class="text-2xl font-heading font-bold uppercase">Kreatywne
-
-
-
-                            <br>filmy
-
-                        </span>
-                    </div>
-                    <p>Kręcimy reportaże, spoty reklamowe, filmy edukacyjne. Obsługujemy transmisje online. 
-
-                    </p>
-                </div>
-
-                 <div
-                    class="bg-primary-400  rounded-xl p-6 flex flex-col justify-center items-center gap-6 py-12 min-h-[350px] text-center  text-font-light">
-
-
-
-
-                    <div class="flex flex-col justify-center items-center">
-
-                        <x-lucide-pencil class="w-20 text-font-light stroke-1 mb-3" />
-                        <span class="text-2xl font-heading font-bold uppercase">Treści,
-
-
-
-                            <br>które angażują
-
-                        </span>
-                    </div>
-                    <p>Szczegółowo planujemy każdy projekt, tak, żeby efekty naszej pracy wzbudzały zachwyt Twoich Klientów.
-
-
-
-
-
-                    </p>
-                </div>
 
             </div>
         </div>
     </section>
 
+
+
+
+
     <section class="pt-12">
 
         <div class="wrapper !max-w-screen-lg prose__content">
-             <h2>Zdjęcia apartamentów, hoteli i restauracji</h2>
+            <h2>Zdjęcia apartamentów, hoteli i restauracji</h2>
 
 
 
