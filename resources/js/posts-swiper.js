@@ -1,22 +1,21 @@
 import Swiper from "swiper";
-import { Autoplay,} from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import "swiper/swiper-bundle.css";
 
 new Swiper(".postsCarousel--js", {
     loop: true,
     grabCursor: true,
-    slidesPerView: 2.5,
-    spaceBetween: 30,
+    speed: 800, // płynność przejścia
+    slidesPerView: 1,
+    spaceBetween: 20,
+
 
     breakpoints: {
         750: {
             slidesPerView: 2,
         },
-        1200:{
+        1280: {
             slidesPerView: 3,
-        },
-        1480: {
-            slidesPerView: 2.5,
         },
     },
 
@@ -26,7 +25,5 @@ new Swiper(".postsCarousel--js", {
         pauseOnMouseEnter: true,
     },
 
-    
-
-    modules: [Autoplay,],
+    modules: [Autoplay],
 });

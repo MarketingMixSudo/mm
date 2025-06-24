@@ -1,8 +1,8 @@
-{{-- add <a> or <div> --}}
+add <a> or <div>
 
 @props(['realisation'])
 
-<div class="  h-[400px] xl:h-[450px] 2xl:h-[530px] rounded-lg overflow-hidden relative flex justify-start items-end p-8 group  realisationItem-js"
+<div class=" swiper-slide h-[400px] xl:h-[450px] 2xl:h-[530px] rounded-lg overflow-hidden relative flex justify-start items-end p-8 group  realisationItem-js"
     data-title="{{ $realisation->realisationCategories->pluck('slug')->implode(', ') }}">
 
     <img src="{{asset('storage/'.$realisation->thumbnail)}}" alt="miniaturka realizacji {{$realisation->title}}"

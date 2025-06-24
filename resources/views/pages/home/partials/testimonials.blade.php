@@ -1,10 +1,10 @@
-<section class="py-12">
+<section class="section">
 
 
-    <div class="max-w-screen-2xl mx-auto">
+    <div class="wrapper !max-w-screen-2xl">
 
-        <h2 class="font-heading text-7xl font-bold uppercase">Opinie naszych klientów</h2>
-        <hr class="border-primary-400 pb-12">
+        <h2 class="section__heading">Opinie naszych klientów</h2>
+        <hr class="border-primary-400 pb-12 mt-2">
 
 
 
@@ -13,22 +13,7 @@
             <div class="swiper-wrapper">
 
                 @foreach ($testimonials as $testimonial)
-                <div class="rounded-xl border border-primary-400 p-8 testimonial-card-js swiper-slide ">
-
-                    <div class="flex justify-start items-center gap-4 border-b pb-8 border-black/40 dark:border-white/10 ">
-
-                        <x-lucide-quote class="text-primary-400 size-8" />
-                        <span class="text-2xl font-medium font-heading">{{$testimonial->name}}</span>
-                    </div>
-
-                    <div class="flex justify-start items-start gap-12 pt-8">
-                         <img src="{{asset('storage/'.$testimonial->logo)}}" alt="{{$testimonial->name}}"class="w-[120px]">
-                        <p class="text-lg">{{$testimonial->content}}</p>
-                        </p>
-                    </div>
-
-
-                </div>
+              <x-testimonial-card :testimonial="$testimonial"/>
                 @endforeach
 
 
