@@ -16,7 +16,8 @@
 
 </x-section-double-image>
 
-<x-section-double-image reverse image="/dummy/service.jpg" alt="Stworzymy pozytywny wizerunek Twojej firmy" linkHref="{{route('about.index')}}" linkLabel="Dowiedz się więcej">
+<x-section-double-image reverse image="/dummy/service.jpg" alt="Stworzymy pozytywny wizerunek Twojej firmy"
+    linkHref="{{route('about.index')}}" linkLabel="Dowiedz się więcej">
     <h2 class="section__heading">Identyfikacja wizualna firmy</h2>
     <p class="section__text">
 

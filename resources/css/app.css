@@ -86,6 +86,10 @@
     .section__heading {
         @apply text-5xl font-bold font-heading;
     }
+
+    .section__heading--large {
+        @apply font-heading text-7xl font-bold uppercase
+    }
     .section__text{
         @apply mt-4
     }

@@ -1,9 +1,9 @@
-<section class="py-12">
+<section class="section">
 
-    <div class="max-w-screen-2xl mx-auto">
+    <div class="wrapper !max-w-screen-2xl xl:!px-6">
 
-        <h2 class="font-heading text-7xl font-bold uppercase">Nasze usługi</h2>
-        <hr class="border-primary-400">
+        <h2 class="section__heading--large">Nasze usługi</h2>
+        <hr class="border-primary-400 mt-2">
 
 
         <div class="flex flex-col py-12">

@@ -26,11 +26,11 @@
 
   @include('pages.home.partials.about')
 
+  @include('pages.home.partials.services')
 
   
 
 
-  @include('pages.home.partials.services')
 
   @include('pages.home.partials.projects')
 
